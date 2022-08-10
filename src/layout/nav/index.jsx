@@ -1,8 +1,9 @@
+import Toggle from '../../components/toggle'
 import Container from '../container'
 
 const Navigation = () => {
   return (
-    <Container>
+    <Container className='nav-container'>
       <div className='navigation'>
         <div>Home</div>
         <div>Location & Route</div>
@@ -10,6 +11,7 @@ const Navigation = () => {
         <div>RSVP</div>
         <div>Info & Contact</div>
       </div>
+      <Toggle />
     </Container>
   )
 }

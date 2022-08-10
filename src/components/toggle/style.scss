@@ -1,0 +1,35 @@
+$toggle-height: 3rem;
+$toggle-width: 6rem;
+$toggle-margin: 2px;
+$circle-size: calc(#{$toggle-height} - #{$toggle-margin} * 2);
+
+.toggle {
+  position: relative;
+  height: $toggle-height;
+  width: $toggle-width;
+  border-radius: 26px;
+  background-color: #e5e5e5;
+
+  &__circle {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: $circle-size;
+    width: $circle-size;
+    border-radius: 1.5rem;
+    background-color: red;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
+    &--cheesy {
+      left: $toggle-margin;
+    }
+
+    &--belgium {
+      left: calc(#{$toggle-width} - #{$circle-size} - #{$toggle-margin});
+      background-color: blue;
+    }
+  }
+}
