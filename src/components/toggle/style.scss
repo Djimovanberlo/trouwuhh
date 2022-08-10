@@ -7,8 +7,12 @@ $circle-size: calc(#{$toggle-height} - #{$toggle-margin} * 2);
   position: relative;
   height: $toggle-height;
   width: $toggle-width;
-  border-radius: 26px;
+  border-radius: calc(1.5rem + $toggle-margin);
   background-color: #e5e5e5;
+
+  &:hover {
+    cursor: pointer;
+  }
 
   &__circle {
     position: absolute;
