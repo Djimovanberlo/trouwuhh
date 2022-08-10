@@ -1,0 +1,8 @@
+.triangle {
+  border-bottom: calc(0.866 * $shape-size) solid $petrol;
+  border-left: calc($shape-size / 2) solid transparent;
+  border-right: calc($shape-size / 2) solid transparent;
+  border-top: 0;
+  height: 0;
+  width: 0;
+}

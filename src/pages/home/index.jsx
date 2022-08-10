@@ -1,5 +1,15 @@
+import Circle from '../../components/circle'
+import Triangle from '../../components/triangle'
+import Main from '../../layout/main'
+
 const HomePage = () => {
-  return <h1>hello</h1>
+  return (
+    <Main>
+      <p>hello</p>
+      <Circle />
+      <Triangle />
+    </Main>
+  )
 }
 
 export default HomePage
