@@ -1,13 +1,12 @@
-import Circle from '../../components/circle'
-import Triangle from '../../components/triangle'
 import Main from '../../layout/main'
+
+// Datum + tijd
 
 const HomePage = () => {
   return (
     <Main>
-      <p>hello</p>
-      <Circle />
-      <Triangle />
+      <div>He wij geven een feestje</div>
+      <div>Kom je ook</div>
     </Main>
   )
 }

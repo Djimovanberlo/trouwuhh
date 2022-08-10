@@ -1,0 +1,3 @@
+const Location = () => {
+  return <div />
+}

@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Navigation from './layout/nav'
 
 import HomePage from './pages/home'
 
@@ -7,11 +8,14 @@ import './styles/main.scss'
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<HomePage />} />
-      </Routes>
-    </BrowserRouter>
+    <>
+      <Navigation />
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<HomePage />} />
+        </Routes>
+      </BrowserRouter>
+    </>
   )
 }
 

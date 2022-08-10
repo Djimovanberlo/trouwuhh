@@ -1,0 +1,3 @@
+const AccomodationAndArea = () => {
+  return <div />
+}
