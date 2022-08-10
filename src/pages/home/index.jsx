@@ -1,13 +1,17 @@
-import Main from '../../layout/main'
+import Container from '../../layout/container'
+import Header from '../../layout/header'
 
 // Datum + tijd
 
 const HomePage = () => {
   return (
-    <Main>
-      <div>He wij geven een feestje</div>
-      <div>Kom je ook</div>
-    </Main>
+    <>
+      <Header />
+      <Container>
+        <div>He wij geven een feestje</div>
+        <div>Kom je ook</div>
+      </Container>
+    </>
   )
 }
 
