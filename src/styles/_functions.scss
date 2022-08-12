@@ -1,0 +1,9 @@
+// theme
+
+@function get-cheesy($key) {
+  @return map-get($cheesy, $key);
+}
+
+@function get-belgium($key) {
+  @return map-get($belgium, $key);
+}

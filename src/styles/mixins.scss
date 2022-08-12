@@ -1,0 +1,12 @@
+// media queries
+@mixin md($threshold: 576px) {
+  @media screen and (min-width: #{$threshold}) {
+    @content;
+  }
+}
+
+@mixin lg($threshold: 768px) {
+  @media screen and (min-width: #{$threshold}) {
+    @content;
+  }
+}

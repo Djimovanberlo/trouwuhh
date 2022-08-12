@@ -1,0 +1,11 @@
+.theme {
+  &--belgium {
+    background-color: $background-belgium;
+    color: white;
+  }
+
+  &--cheesy {
+    background-color: $background-cheesy;
+    color: black;
+  }
+}

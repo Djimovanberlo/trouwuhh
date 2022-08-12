@@ -2,13 +2,15 @@
 @use 'sass:math';
 
 @import './variables';
+@import './mixins.scss';
+@import './functions.scss';
 
 // Layout
 @import '../layout/header/style.scss';
 @import '../layout/container/style.scss';
 @import '../layout/nav/style.scss';
+@import '../layout/theme/style.scss';
 
 // Components
 @import '../components/toggle/style.scss';
-@import '../components/circle/style.scss';
-@import '../components/triangle/style.scss';
+@import '../components/flex-section/style.scss';

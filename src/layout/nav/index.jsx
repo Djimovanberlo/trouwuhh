@@ -1,18 +1,20 @@
+import { Link } from 'react-router-dom'
 import Toggle from '../../components/toggle'
-import Container from '../container'
 
 const Navigation = () => {
   return (
-    <Container className='nav-container'>
-      <div className='navigation'>
-        <div>Home</div>
-        <div>Location & Route</div>
-        <div>Accomodaion & Area</div>
-        <div>RSVP</div>
-        <div>Info & Contact</div>
+    <div className='nav'>
+      <div className='nav__wrapper'>
+        <Link className='nav__item' to='/'>
+          Home
+        </Link>
+        <Link to='/location'>Location</Link>
+        <Link to='/area'>Area</Link>
+        <Link to='/rsvp'>RSVP</Link>
+        <Link to='/contact'>Contact</Link>
       </div>
       <Toggle />
-    </Container>
+    </div>
   )
 }
 

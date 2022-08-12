@@ -2,4 +2,16 @@
   max-width: 75rem;
   margin-left: auto;
   margin-right: auto;
+  padding-left: $space-sm;
+  padding-right: $space-sm;
+
+  @include md {
+    padding-left: $space-md;
+    padding-right: $space-md;
+  }
+
+  @include lg {
+    padding-left: $space-lg;
+    padding-right: $space-lg;
+  }
 }

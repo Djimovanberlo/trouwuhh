@@ -1,6 +1,6 @@
-$toggle-height: 3rem;
-$toggle-width: 6rem;
-$toggle-margin: 2px;
+$toggle-height: 24px;
+$toggle-width: 48px;
+$toggle-margin: 1px;
 $circle-size: calc(#{$toggle-height} - #{$toggle-margin} * 2);
 
 .toggle {

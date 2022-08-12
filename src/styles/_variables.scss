@@ -3,5 +3,33 @@ $pink: #f575da;
 $red: red;
 $petrol: green;
 
-// misc
-$shape-size: (random(20) + 200) + px;
+// themes
+$cheesy: (
+  backgroundColor: #fff,
+  textColor: #408bbd,
+  buttonTextColor: #408bbd,
+  buttonTextTransform: none,
+  buttonTextHoverColor: #61b0e7,
+  buttonColor: #fff,
+  buttonBorder: 2px solid #fff,
+);
+
+$belgium: (
+  backgroundColor: #222,
+  textColor: #ddd,
+  buttonTextColor: #aaa,
+  buttonTextTransform: uppercase,
+  buttonTextHoverColor: #ddd,
+  buttonColor: #333,
+  buttonBorder: 1px solid #aaa,
+);
+
+$background-belgium: map-get($belgium, backgroundColor);
+$background-cheesy: map-get($cheesy, backgroundColor);
+
+// spacing
+$space-xs: 0.5rem;
+$space-sm: 1.5rem;
+$space-md: 2.5rem;
+$space-lg: 3.5rem;
+$space-xl: 4.5rem;

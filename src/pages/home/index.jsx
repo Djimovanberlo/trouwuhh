@@ -1,16 +1,13 @@
-import Container from '../../layout/container'
-import Header from '../../layout/header'
+import FlexSection from '../../components/flex-section'
 
 // Datum + tijd
 
 const HomePage = () => {
   return (
     <>
-      <Header />
-      <Container>
-        <div>He wij geven een feestje</div>
-        <div>Kom je ook</div>
-      </Container>
+      <div>He wij geven een feestje</div>
+      <div>Kom je ook</div>
+      <FlexSection />
     </>
   )
 }

@@ -1,0 +1,15 @@
+.flex-section {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid blue;
+
+  @include md {
+    flex-direction: row;
+  }
+
+  > div {
+    flex-grow: 1;
+    height: 100px;
+    border: 2px solid green;
+  }
+}

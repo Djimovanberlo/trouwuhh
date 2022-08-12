@@ -1,3 +1,5 @@
 const Rsvp = () => {
-  return <div />
+  return <div>rsvp</div>
 }
+
+export default Rsvp

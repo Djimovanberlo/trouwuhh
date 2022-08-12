@@ -1,3 +1,5 @@
 const Location = () => {
-  return <div />
+  return <div>Location</div>
 }
+
+export default Location
