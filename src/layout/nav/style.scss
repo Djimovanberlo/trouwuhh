@@ -4,7 +4,15 @@
   align-items: center;
   padding: $space-xs 0;
 
-  &__wrapper {
+  &--small {
+    flex-direction: row;
+  }
+
+  &--large {
+    flex-direction: row-reverse;
+  }
+
+  &__wrapper-large {
     display: flex;
     gap: $space-md;
   }
