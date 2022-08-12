@@ -1,5 +1,6 @@
 .theme {
   transition: all 1s;
+  min-height: 100vh;
 
   &--belgium {
     background-color: $background-belgium;
