@@ -1,26 +1,26 @@
 import { useState, useCallback, useEffect } from 'react'
 
-export const useIsLage = () => {
-  const [isLarge, setIsLarge] = useState(false)
+export const useIsMediumScreen = () => {
+  const [isMediumScreen, setIsMediumScreen] = useState(false)
 
   const getWidth = useCallback(e => {
     if (e.matches) {
-      setIsLarge(true)
+      setIsMediumScreen(true)
     } else {
-      setIsLarge(false)
+      setIsMediumScreen(false)
     }
   }, [])
 
   useEffect(() => {
-    const media = window.matchMedia(`(max-width: 768px)`)
+    const media = window.matchMedia(`(max-width: 576px)`)
     media.addEventListener('change', e => getWidth(e))
 
     if (media.matches) {
-      setIsLarge(true)
+      setIsMediumScreen(true)
     }
 
     return () => media.removeEventListener('change', e => getWidth(e))
   }, [getWidth])
 
-  return isLarge
+  return isMediumScreen
 }

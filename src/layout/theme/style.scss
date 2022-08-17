@@ -1,14 +1,14 @@
 .theme {
-  transition: all 1s;
   min-height: 100vh;
+  transition: all 1s;
 
   &--belgium {
     background-color: $background-belgium;
-    color: white;
+    color: $color-belgium;
   }
 
   &--cheesy {
     background-color: $background-cheesy;
-    color: black;
+    color: $color-cheesy;
   }
 }

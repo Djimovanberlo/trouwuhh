@@ -5,12 +5,12 @@
   padding-left: $space-sm;
   padding-right: $space-sm;
 
-  @include md {
+  @include screen-md {
     padding-left: $space-md;
     padding-right: $space-md;
   }
 
-  @include lg {
+  @include screen-lg {
     padding-left: $space-lg;
     padding-right: $space-lg;
   }

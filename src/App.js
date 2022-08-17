@@ -1,7 +1,7 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
 import Navigation from './layout/nav'
-import Header from './layout/header'
+import Banner from './layout/banner'
 import HomePage from './pages/home'
 import Location from './pages/location'
 import Area from './pages/area'
@@ -19,7 +19,7 @@ const App = () => {
       <BrowserRouter>
         <Container>
           <Navigation />
-          <Header />
+          <Banner />
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/location' element={<Location />} />

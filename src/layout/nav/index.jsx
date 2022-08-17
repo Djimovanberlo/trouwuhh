@@ -1,14 +1,14 @@
-import { useIsLage } from '../../lib/utils'
+import { useIsMediumScreen } from '../../lib/utils'
 import Toggle from '../../components/toggle'
 import NavigationLarge from './nav-large'
 import NavigationSmall from './nav-small'
 
 const Navigation = () => {
-  const isLarge = useIsLage()
+  const isMediumScreen = useIsMediumScreen()
 
   return (
-    <div className={`nav nav--${isLarge ? 'large' : 'small'}`}>
-      {isLarge ? <NavigationSmall /> : <NavigationLarge />}
+    <div className={`nav nav--${isMediumScreen ? 'small' : 'large'}`}>
+      {isMediumScreen ? <NavigationSmall /> : <NavigationLarge />}
       <Toggle />
     </div>
   )

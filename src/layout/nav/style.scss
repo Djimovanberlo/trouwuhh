@@ -1,3 +1,5 @@
+$small-header-height: calc($space-sm + ($space-xs * 2));
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -5,15 +7,97 @@
   padding: $space-xs 0;
 
   &--small {
-    flex-direction: row;
+    flex-direction: row-reverse;
+
+    &__wrapper {
+      position: relative;
+    }
   }
 
   &--large {
-    flex-direction: row-reverse;
+    flex-direction: row;
   }
 
   &__wrapper-large {
     display: flex;
     gap: $space-md;
+  }
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: $space-sm;
+  height: $space-sm;
+
+  &--belgium {
+    > span {
+      background-color: $color-belgium;
+    }
+  }
+
+  &--cheesy {
+    > span {
+      background-color: $color-cheesy;
+    }
+  }
+
+  > span {
+    width: 100%;
+    height: 3px;
+    transform-origin: 1px;
+    @include transition;
+
+    &:nth-child(1) {
+      @include rotate(0);
+    }
+
+    &:nth-child(2) {
+      opacity: 1;
+      @include translateX(0);
+    }
+
+    &:nth-child(3) {
+      @include rotate(0);
+    }
+  }
+
+  &--open > span {
+    &:nth-child(1) {
+      @include rotate(45deg);
+    }
+
+    &:nth-child(2) {
+      opacity: 0;
+      @include translateX(-50%);
+    }
+
+    &:nth-child(3) {
+      @include rotate(-45deg);
+    }
+  }
+}
+
+.nav-list {
+  @include transition;
+  position: absolute;
+  background-color: red;
+  top: calc(100% + $space-xs);
+  width: 50vw;
+  height: calc(100vh - $small-header-height);
+  display: flex;
+  flex-direction: column;
+  gap: $space-sm;
+  padding: $space-sm;
+
+  &--open {
+    right: -$space-sm;
+    visibility: visible;
+  }
+
+  &--closed {
+    visibility: hidden;
+    right: calc(-50vw - $space-sm);
   }
 }
