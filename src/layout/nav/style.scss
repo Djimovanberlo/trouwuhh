@@ -9,6 +9,11 @@ $border-size: 4px;
   &--belgium {
     background-color: $color-white;
     border-bottom: 2px solid $belgium-color-black;
+
+    @include screen-md {
+      background-color: transparent;
+      border: none;
+    }
   }
 
   &--cheesy {
