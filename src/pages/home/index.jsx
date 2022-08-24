@@ -4,11 +4,9 @@ import FlexSection from '../../components/flex-section'
 
 const HomePage = () => {
   return (
-    <>
-      <div>He wij geven een feestje</div>
-      <div>Kom je ook</div>
+    <div className='wrapper'>
       <FlexSection />
-    </>
+    </div>
   )
 }
 

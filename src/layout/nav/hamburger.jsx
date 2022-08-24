@@ -1,8 +1,7 @@
-import { useContext } from 'react'
-import { ThemeContext } from '../theme'
+import { useThemeContext } from '../theme'
 
 const Hamburger = ({ isNavOpen, toggleNavOpen }) => {
-  const { theme } = useContext(ThemeContext)
+  const { theme } = useThemeContext()
 
   return (
     <div id='hamburger' className={`hamburger hamburger--${theme} ${isNavOpen ? 'hamburger--open' : 'hamburger--closed'}`} onClick={toggleNavOpen}>

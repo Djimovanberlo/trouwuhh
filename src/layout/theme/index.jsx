@@ -1,8 +1,10 @@
-import { createContext, useState } from 'react'
+import { createContext, useContext, useState } from 'react'
 
 import { THEMES } from '../../lib/constants'
 
 const ThemeContext = createContext()
+
+const useThemeContext = () => useContext(ThemeContext)
 
 const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState(THEMES.cheesy)
@@ -20,4 +22,4 @@ const ThemeProvider = ({ children }) => {
   )
 }
 
-export { ThemeProvider, ThemeContext }
+export { ThemeProvider, useThemeContext }

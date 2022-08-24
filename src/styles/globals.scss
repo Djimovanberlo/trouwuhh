@@ -8,6 +8,12 @@ body {
   scroll-behavior: smooth;
 }
 
+h1,
+h2,
+p {
+  margin: 0;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -15,4 +21,26 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+// fonts
+@font-face {
+  font-family: 'Vivaldii';
+  src: url('/fonts/Vivaldii.woff') format('woff');
+  fonst-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DancingScript-Regular';
+  src: url('/fonts/DancingScript-Regular.woff') format('woff');
+  fonst-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-Regular';
+  src: url('/fonts/Roboto-Regular.woff') format('woff');
+  fonst-style: normal;
+  font-display: swap;
 }

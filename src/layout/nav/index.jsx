@@ -7,7 +7,7 @@ const Navigation = () => {
   const isMediumScreen = useIsMediumScreen()
 
   return (
-    <div className={`nav nav--${isMediumScreen ? 'small' : 'large'}`}>
+    <div className={`wrapper nav nav--${isMediumScreen ? 'small' : 'large'}`}>
       {isMediumScreen ? <NavigationSmall /> : <NavigationLarge />}
       <Toggle />
     </div>

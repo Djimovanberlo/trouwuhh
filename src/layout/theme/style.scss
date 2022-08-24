@@ -12,3 +12,18 @@
     color: $color-cheesy;
   }
 }
+
+.wrapper {
+  padding-left: $space-sm;
+  padding-right: $space-sm;
+
+  @include screen-md {
+    padding-left: $space-md;
+    padding-right: $space-md;
+  }
+
+  @include screen-lg {
+    padding-left: $space-lg;
+    padding-right: $space-lg;
+  }
+}

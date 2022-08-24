@@ -1,5 +1,6 @@
 import { useId, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { P } from '../../components/typography'
 
 import { NAV_ITEMS } from '../../lib/constants'
 import Hamburger from './hamburger'
@@ -18,7 +19,7 @@ const NavList = ({ isNavOpen, toggleNavOpen }) => {
     <div className={`nav-list ${isNavOpen ? 'nav-list--open' : 'nav-list--closed'}`}>
       {NAV_ITEMS.map(({ text, href }, index) => (
         <div key={`${id}--${index}`} onClick={handleClick(href)}>
-          {text}
+          <P>{text}</P>
         </div>
       ))}
     </div>

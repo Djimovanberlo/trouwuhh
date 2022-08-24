@@ -1,0 +1,49 @@
+.h1 {
+  font-size: 24px;
+
+  &--belgium {
+    font-family: 'Roboto-Regular';
+  }
+
+  &--cheesy {
+    font-family: 'Vivaldii';
+  }
+
+  @include screen-md {
+    font-size: 38px;
+  }
+}
+
+.h2 {
+  font-size: 18px;
+
+  &--belgium {
+    font-family: 'Roboto-Regular';
+  }
+
+  &--cheesy {
+    font-family: 'Vivaldii';
+  }
+
+  @include screen-md {
+    font-size: 22px;
+  }
+}
+
+.p {
+  font-size: 16px;
+
+  &--belgium {
+    font-family: 'Roboto-Regular';
+  }
+
+  &--cheesy {
+    font-family: 'DancingScript-Regular';
+  }
+
+  @include screen-md {
+    font-size: 18px;
+  }
+}
+
+// font-family: 'Roboto', sans-serif;

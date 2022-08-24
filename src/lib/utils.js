@@ -15,9 +15,7 @@ export const useIsMediumScreen = () => {
     const media = window.matchMedia(`(max-width: 576px)`)
     media.addEventListener('change', e => getWidth(e))
 
-    if (media.matches) {
-      setIsMediumScreen(true)
-    }
+    if (media.matches) setIsMediumScreen(true)
 
     return () => media.removeEventListener('change', e => getWidth(e))
   }, [getWidth])
