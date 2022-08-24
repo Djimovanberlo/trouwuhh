@@ -10,11 +10,11 @@ $circle-size: calc(#{$toggle-height} - #{$toggle-margin} * 2);
   border-radius: calc(1.5rem + $toggle-margin);
 
   &--belgium {
-    background-color: $cheesy-color-pink;
+    background-color: $belgium-color-black;
   }
 
   &--cheesy {
-    background-color: $belgium-color-black;
+    background-color: $cheesy-color-pink;
   }
 
   &:hover {
@@ -23,6 +23,7 @@ $circle-size: calc(#{$toggle-height} - #{$toggle-margin} * 2);
 
   &__circle {
     position: absolute;
+    background-color: $color-white;
     top: 50%;
     transform: translateY(-50%);
     height: $circle-size;
@@ -32,12 +33,10 @@ $circle-size: calc(#{$toggle-height} - #{$toggle-margin} * 2);
 
     &--belgium {
       left: calc(#{$toggle-width} - #{$circle-size} - #{$toggle-margin});
-      background-color: $color-white;
     }
 
     &--cheesy {
       left: $toggle-margin;
-      background-color: $color-white;
     }
   }
 }

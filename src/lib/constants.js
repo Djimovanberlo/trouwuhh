@@ -13,10 +13,6 @@ export const NAV_ITEMS = [
     href: '/location',
   },
   {
-    text: 'Area',
-    href: '/area',
-  },
-  {
     text: 'RSVP',
     href: '/rsvp',
   },

@@ -33,16 +33,18 @@ $color-cheesy: map-get($cheesy, textColor);
 $button-cheesy: map-get($cheesy, buttonColor);
 
 // colors
+// generic
+$color-white: #fff;
+
 // belgium
-$belgium-color-red: #e30800;
+$belgium-color-red: #ff0600;
 $belgium-color-yellow: #f8d700;
 $belgium-color-black: #000;
 
 // cheesy
 $cheesy-color-pink: #e16699;
-
-// generic
-$color-white: #fff;
+$cheesy-color-pink-transparent: rgba($cheesy-color-pink, 0.5);
+$cheesy-color-white-transparent: rgba($color-white, 0.5);
 
 // spacing
 $space-xs: 0.5rem;

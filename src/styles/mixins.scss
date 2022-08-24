@@ -32,3 +32,11 @@
   -moz-transform: translateX($value);
   -o-transform: translateX($value);
 }
+
+// colors
+@mixin border($size, $color) {
+  border-top: $size solid lighten($color, 15%);
+  border-right: $size solid darken($color, 25%);
+  border-bottom: $size solid darken($color, 30%);
+  border-left: $size solid darken($color, 20%);
+}

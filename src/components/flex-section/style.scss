@@ -1,15 +1,65 @@
+$border-size: 8px;
+
 .flex-section {
   display: flex;
   flex-direction: column;
-  border: 2px solid blue;
+  margin: $space-md 0;
+  @include transition;
+
+  &--cheesy {
+    padding: $space-xs;
+    background-color: $cheesy-color-pink-transparent;
+    @include border($border-size, $cheesy-color-pink-transparent);
+  }
 
   @include screen-md {
     flex-direction: row;
+
+    &--reverse {
+      flex-direction: row-reverse;
+    }
   }
 
-  > div {
-    flex: 1;
-    height: 100px;
-    border: 2px solid green;
+  &__block {
+    height: 50%;
+
+    @include screen-md {
+      height: 100%;
+      width: 50%;
+    }
+
+    &--belgium {
+      padding: calc((2 * $space-xs) + ($border-size * 2));
+
+      &--black {
+        background-color: $belgium-color-black;
+
+        > * {
+          color: $color-white;
+        }
+      }
+
+      &--yellow {
+        background-color: $belgium-color-yellow;
+
+        > * {
+          color: $belgium-color-black;
+        }
+      }
+
+      &--red {
+        background-color: $belgium-color-red;
+
+        > * {
+          color: $color-white;
+        }
+      }
+    }
+
+    &--cheesy {
+      background-color: $cheesy-color-white-transparent;
+      @include border($border-size, $cheesy-color-white-transparent);
+      padding: $space-xs;
+    }
   }
 }
