@@ -1,15 +1,25 @@
 .theme {
   min-height: 100vh;
-  transition: all 1s;
+  transition: background-image 1s;
 
   &--belgium {
-    background-color: $background-belgium;
-    color: $color-belgium;
+    background-image: url('../../../public/belgium-background.jpg');
+    background-size: cover;
+
+    @include screen-md {
+      background-repeat: repeat;
+      background-size: calc(100vw / 3);
+    }
   }
 
   &--cheesy {
-    background-color: $background-cheesy;
-    color: $color-cheesy;
+    background-image: url('../../../public/cheesy-background.jpg');
+    background-size: cover;
+
+    @include screen-md {
+      background-repeat: repeat;
+      background-size: calc(100vw / 3);
+    }
   }
 }
 

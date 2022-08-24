@@ -26,21 +26,21 @@ a {
 // fonts
 @font-face {
   font-family: 'Vivaldii';
-  src: url('/fonts/Vivaldii.woff') format('woff');
+  src: url('./fonts/Vivaldii.woff') format('woff');
   fonst-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'DancingScript-Regular';
-  src: url('/fonts/DancingScript-Regular.woff') format('woff');
+  src: url('./fonts/DancingScript-Regular.woff') format('woff');
   fonst-style: normal;
   font-display: swap;
 }
 
 @font-face {
   font-family: 'Roboto-Regular';
-  src: url('/fonts/Roboto-Regular.woff') format('woff');
+  src: url('./fonts/Roboto-Regular.woff') format('woff');
   fonst-style: normal;
   font-display: swap;
 }
