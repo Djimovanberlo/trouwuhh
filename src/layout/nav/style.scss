@@ -1,5 +1,4 @@
 $border-size: 4px;
-$small-header-height: calc($space-sm + ($space-xs * 2));
 
 .nav {
   display: flex;
@@ -7,8 +6,24 @@ $small-header-height: calc($space-sm + ($space-xs * 2));
   align-items: center;
   padding: $space-xs 0;
 
+  &--belgium {
+    background-color: $color-white;
+    border-bottom: 2px solid $belgium-color-black;
+  }
+
+  &--cheesy {
+    background-color: $cheesy-color-pink-transparent;
+
+    @include screen-md {
+      background-color: transparent;
+    }
+  }
+
   &--small {
+    position: fixed;
+    top: 0;
     flex-direction: row-reverse;
+    width: 100%;
 
     &__wrapper {
       position: relative;
@@ -67,13 +82,13 @@ $small-header-height: calc($space-sm + ($space-xs * 2));
 
   &--belgium {
     > span {
-      background-color: $color-belgium;
+      background-color: $belgium-color-black;
     }
   }
 
   &--cheesy {
     > span {
-      background-color: $color-cheesy;
+      background-color: $color-white;
     }
   }
 
@@ -116,7 +131,6 @@ $small-header-height: calc($space-sm + ($space-xs * 2));
 .nav-list {
   @include transition;
   position: absolute;
-  background-color: red;
   top: calc(100% + $space-xs);
   width: 50vw;
   height: calc(100vh - $small-header-height);
@@ -124,6 +138,20 @@ $small-header-height: calc($space-sm + ($space-xs * 2));
   flex-direction: column;
   gap: $space-sm;
   padding: $space-sm;
+
+  &--belgium {
+    background-color: $belgium-color-black;
+    & > div > p {
+      color: $color-white;
+    }
+  }
+
+  &--cheesy {
+    background-color: $cheesy-color-pink-transparent;
+    & > div > p {
+      color: $color-white;
+    }
+  }
 
   &--open {
     right: -$space-sm;

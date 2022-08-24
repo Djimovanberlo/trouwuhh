@@ -7,7 +7,6 @@ import { useThemeContext } from '../theme'
 const Navigation = () => {
   const isMediumScreen = useIsMediumScreen()
   const { theme } = useThemeContext()
-  const navThemeClassName = theme === 'belgium' ? '' : ''
 
   return (
     <div className={`wrapper nav nav--${isMediumScreen ? 'small' : 'large'} nav--${theme}`}>

@@ -18,7 +18,6 @@ const App = () => {
       <BrowserRouter>
         <Container>
           <Navigation />
-          <Banner />
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/location' element={<Location />} />

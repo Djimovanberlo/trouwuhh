@@ -3,11 +3,13 @@ import { useNavigate } from 'react-router-dom'
 import { P } from '../../components/typography'
 
 import { NAV_ITEMS } from '../../lib/constants'
+import { useThemeContext } from '../theme'
 import Hamburger from './hamburger'
 
 const NavList = ({ isNavOpen, toggleNavOpen }) => {
   const id = useId()
   const navigate = useNavigate()
+  const { theme } = useThemeContext()
 
   const handleClick = href => evt => {
     evt.preventDefault()
@@ -16,7 +18,7 @@ const NavList = ({ isNavOpen, toggleNavOpen }) => {
   }
 
   return (
-    <div className={`nav-list ${isNavOpen ? 'nav-list--open' : 'nav-list--closed'}`}>
+    <div className={`nav-list nav-list--${theme} ${isNavOpen ? 'nav-list--open' : 'nav-list--closed'}`}>
       {NAV_ITEMS.map(({ text, href }, index) => (
         <div key={`${id}--${index}`} onClick={handleClick(href)}>
           <P>{text}</P>

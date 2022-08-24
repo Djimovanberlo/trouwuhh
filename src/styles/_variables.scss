@@ -1,38 +1,4 @@
 // colors
-$pink: #f575da;
-$red: red;
-$petrol: green;
-
-// themes
-$cheesy: (
-  backgroundColor: #ddd,
-  textColor: #222,
-  buttonColor: #aaa111,
-  buttonTextColor: #aaa111,
-  buttonTextTransform: none,
-  buttonTextHoverColor: #61b0e7,
-  buttonBorder: 2px solid #fff,
-);
-
-$belgium: (
-  backgroundColor: #222,
-  textColor: #ddd,
-  buttonColor: #111aaa,
-  buttonTextColor: #aaa,
-  buttonTextTransform: uppercase,
-  buttonTextHoverColor: #ddd,
-  buttonBorder: 1px solid #aaa,
-);
-
-$background-belgium: map-get($belgium, backgroundColor);
-$color-belgium: map-get($belgium, textColor);
-$button-belgium: map-get($belgium, buttonColor);
-
-$background-cheesy: map-get($cheesy, backgroundColor);
-$color-cheesy: map-get($cheesy, textColor);
-$button-cheesy: map-get($cheesy, buttonColor);
-
-// colors
 // generic
 $color-white: #fff;
 
@@ -52,3 +18,6 @@ $space-sm: 1.5rem;
 $space-md: 2.5rem;
 $space-lg: 3.5rem;
 $space-xl: 4.5rem;
+
+//misc
+$small-header-height: calc($space-sm + ($space-xs * 2));
