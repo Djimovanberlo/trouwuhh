@@ -8,7 +8,14 @@ $circle-size: calc(#{$toggle-height} - #{$toggle-margin} * 2);
   height: $toggle-height;
   width: $toggle-width;
   border-radius: calc(1.5rem + $toggle-margin);
-  background-color: #e5e5e5;
+
+  &--belgium {
+    background-color: $cheesy-color-pink;
+  }
+
+  &--cheesy {
+    background-color: $belgium-color-black;
+  }
 
   &:hover {
     cursor: pointer;
@@ -25,12 +32,12 @@ $circle-size: calc(#{$toggle-height} - #{$toggle-margin} * 2);
 
     &--belgium {
       left: calc(#{$toggle-width} - #{$circle-size} - #{$toggle-margin});
-      background-color: $button-belgium;
+      background-color: $color-white;
     }
 
     &--cheesy {
       left: $toggle-margin;
-      background-color: $button-cheesy;
+      background-color: $color-white;
     }
   }
 }
