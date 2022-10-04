@@ -11,11 +11,20 @@ import Curtains from './components/curtains'
 
 import './styles/globals.scss'
 import './styles/main.scss'
+import { useEffect, useState } from 'react'
 
 const App = () => {
+  const [displayCurtains, setDisplayCurtains] = useState(true)
+
+  useEffect(() => {
+    const pwResult = localStorage.getItem('password_correct')
+    const isPwSuccess = JSON.parse(pwResult)
+    setDisplayCurtains(isPwSuccess ? false : true)
+  }, [])
+
   return (
     <>
-      <Curtains />
+      {displayCurtains && <Curtains />}
       <ThemeProvider>
         <BrowserRouter>
           <Container>

@@ -4,6 +4,10 @@
   width: 100%;
   z-index: 1;
 
+  &--open {
+    visibility: hidden;
+  }
+
   &__container {
     position: relative;
     height: 100%;
@@ -35,12 +39,13 @@
     }
   }
 
-  &__btn {
+  &__form {
     position: absolute;
     left: 0;
     right: 0;
+    width: fit-content;
+    display: flex;
     margin: 0 auto;
-    width: 100px;
     top: 50%;
 
     &--open {
