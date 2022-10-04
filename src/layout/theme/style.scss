@@ -3,7 +3,7 @@
   transition: background-image 1s;
 
   &--belgium {
-    background-image: url('../../../public/belgium-background.jpg');
+    background-image: url('../../../public/belgium/belgium-background.jpg');
     background-size: cover;
 
     @include screen-md {
@@ -12,7 +12,7 @@
   }
 
   &--cheesy {
-    background-image: url('../../../public/cheesy-background.jpg');
+    background-image: url('../../../public/cheesy/cheesy-background.jpg');
     background-size: cover;
 
     @include screen-md {

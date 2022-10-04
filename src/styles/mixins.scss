@@ -12,11 +12,19 @@
 }
 
 // animations
-@mixin transition {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+@mixin transition($time) {
+  -webkit-transition: all $time ease-in-out;
+  -moz-transition: all $time ease-in-out;
+  -o-transition: all $time ease-in-out;
+  transition: all $time ease-in-out;
+}
+
+@mixin transition--fast {
+  @include transition(0.3s);
+}
+
+@mixin transition--slow {
+  @include transition(2s);
 }
 
 @mixin rotate($value) {

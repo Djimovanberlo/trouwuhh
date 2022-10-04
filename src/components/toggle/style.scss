@@ -29,7 +29,7 @@ $circle-size: calc(#{$toggle-height} - #{$toggle-margin} * 2);
     height: $circle-size;
     width: $circle-size;
     border-radius: 1.5rem;
-    @include transition;
+    @include transition--fast;
 
     &--belgium {
       left: calc(#{$toggle-width} - #{$circle-size} - #{$toggle-margin});

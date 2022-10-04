@@ -4,7 +4,7 @@ $border-size: 8px;
   display: flex;
   flex-direction: column;
   margin: $space-md 0;
-  @include transition;
+  @include transition--fast;
 
   &--cheesy {
     padding: $space-xs;
