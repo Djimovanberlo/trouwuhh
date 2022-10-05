@@ -2,7 +2,7 @@ import { Form, Formik } from 'formik'
 import { useState } from 'react'
 
 import Button from '../buttons'
-import FormField from '../form'
+import { FormTextField } from '../form'
 
 const Curtains = () => {
   const [isPwCorrect, setIsPwCorrect] = useState(false)
@@ -24,7 +24,7 @@ const Curtains = () => {
         <img alt='' className={`curtains__right ${isPwCorrect ? 'curtains__right--open' : ''}`} src='/curtain-right.png' />
         <Formik initialValues={formInitValues} onSubmit={handleClick}>
           <Form className={`curtains__form ${isPwCorrect ? 'curtains__form--open' : ''}`}>
-            <FormField name='password' placeholder='Enter password' />
+            <FormTextField name='password' placeholder='Enter password' />
             <Button type='submit'>Submit</Button>
           </Form>
         </Formik>

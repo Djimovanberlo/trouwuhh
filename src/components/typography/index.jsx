@@ -14,3 +14,8 @@ export const P = ({ className = '', children }) => {
   const { theme } = useThemeContext()
   return <p className={`p p--${theme} ${className}`}>{children}</p>
 }
+
+export const Label = ({ className = '', children }) => {
+  const { theme } = useThemeContext()
+  return <label className={`label label--${theme} ${className}`}>{children}</label>
+}
