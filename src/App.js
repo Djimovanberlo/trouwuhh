@@ -17,9 +17,8 @@ const App = () => {
   const [displayCurtains, setDisplayCurtains] = useState(true)
 
   useEffect(() => {
-    const pwResult = localStorage.getItem('password_correct')
-    const isPwSuccess = JSON.parse(pwResult)
-    setDisplayCurtains(isPwSuccess ? false : true)
+    const pwResult = JSON.parse(localStorage.getItem('password_correct')) ?? null
+    setDisplayCurtains(pwResult ? false : true)
   }, [])
 
   return (
