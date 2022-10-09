@@ -1,7 +1,7 @@
 import { Form, Formik } from 'formik'
 import { useState } from 'react'
 
-import Button from '../buttons'
+import { ButtonBelgium } from '../buttons'
 import { FormTextField } from '../form'
 
 const Curtains = () => {
@@ -25,7 +25,7 @@ const Curtains = () => {
         <Formik initialValues={formInitValues} onSubmit={handleClick}>
           <Form className={`curtains__form ${isPwCorrect ? 'curtains__form--open' : ''}`}>
             <FormTextField name='password' placeholder='Enter password' />
-            <Button type='submit'>Submit</Button>
+            <ButtonBelgium type='submit'>Submit</ButtonBelgium>
           </Form>
         </Formik>
       </div>

@@ -1,5 +1,5 @@
 import { useId } from 'react'
-import { Link } from 'react-router-dom'
+import { ButtonLink } from '../../components/buttons'
 import { P } from '../../components/typography'
 
 import { NAV_ITEMS } from '../../lib/constants'
@@ -12,9 +12,9 @@ const NavigationLarge = () => {
   return (
     <div className={`nav__wrapper-large nav__wrapper-large--${theme}`}>
       {NAV_ITEMS.map(({ text, href }, index) => (
-        <Link key={`${id}--${index}`} to={href}>
+        <ButtonLink key={`${id}--${index}`} to={href}>
           <P>{text}</P>
-        </Link>
+        </ButtonLink>
       ))}
     </div>
   )

@@ -42,39 +42,6 @@ $border-size: 4px;
   &__wrapper-large {
     display: flex;
     gap: $space-xs;
-
-    & > a {
-      width: 5rem;
-      display: grid;
-      place-items: center;
-    }
-
-    &--belgium {
-      & > a {
-        padding: $border-size 0;
-
-        &:hover {
-          background-color: $belgium-color-black;
-          color: $color-white;
-        }
-      }
-    }
-
-    &--cheesy > a {
-      background-color: $cheesy-color-white-transparent;
-      @include border($border-size, $cheesy-color-white-transparent);
-      @include transition--fast;
-
-      &:hover {
-        @include transition--fast;
-        background-color: $cheesy-color-pink-transparent;
-        @include border($border-size, $cheesy-color-pink-transparent);
-
-        & > p {
-          color: $color-white;
-        }
-      }
-    }
   }
 }
 

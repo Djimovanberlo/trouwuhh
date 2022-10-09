@@ -17,7 +17,7 @@ export const NAV_ITEMS = [
     href: '/rsvp',
   },
   {
-    text: 'Contact',
+    text: 'Contact / FAQ',
     href: '/contact',
   },
 ]

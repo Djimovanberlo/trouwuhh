@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { doc, setDoc } from 'firebase/firestore'
 import { FieldArray, Form, Formik } from 'formik'
 
-import Button from '../../components/buttons'
+import { Button } from '../../components/buttons'
 import { FormCheckBoxField, FormRadioField, FormTextField } from '../../components/form'
 import { H2, P } from '../../components/typography'
 import { db, GUEST_COLLECTION } from '../../firebase/config'
@@ -55,12 +55,12 @@ const Contact = () => {
                           <FormCheckBoxField name={`guests.${index}.isChild`} labelText='kinderportie' /> <br />
                           <FormCheckBoxField name={`guests.${index}.isVegetarian`} labelText='vega aub' /> <br />
                           <Button type='button' onClick={() => values.guests.length > 1 && remove(index)}>
-                            Remove guest
+                            <P>Remove guest</P>
                           </Button>
                         </div>
                       ))}
                       <Button type='button' onClick={() => values.guests.length < 5 && push({ ...formInitGuestObj })}>
-                        Add guest
+                        <P>Add guest</P>
                       </Button>
                     </>
                   )}
@@ -70,9 +70,11 @@ const Contact = () => {
                     evt.preventDefault()
                     handleReset()
                   }}>
-                  RESET
+                  <P>RESET</P>
                 </Button>
-                <Button type='submit'>ADD DATA</Button>
+                <Button type='submit'>
+                  <P>ADD DATA</P>
+                </Button>
               </Form>
             )}
           </Formik>
