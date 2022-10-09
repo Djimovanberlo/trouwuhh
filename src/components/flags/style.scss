@@ -1,0 +1,9 @@
+.flags {
+  display: grid;
+  place-items: center;
+  width: 2rem;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
