@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { doc, setDoc } from 'firebase/firestore'
 import { FieldArray, Form, Formik } from 'formik'
 
@@ -9,8 +10,9 @@ import Banner from '../../layout/banner'
 import Wrapper from '../../layout/wrapper'
 
 const Contact = () => {
-  const formInitGuesObj = { guestName: '', isPresent: false, isChild: false, isVegetarian: false }
-  const formInitValues = { guests: [{ ...formInitGuesObj }] }
+  const [rerender, setRerender] = useState(false)
+  const formInitGuestObj = { guestName: '', isPresent: false, isChild: false, isVegetarian: false }
+  const formInitValues = { guests: [{ ...formInitGuestObj }] }
 
   const addGuests = values => {
     const nameArr = values.guests.map(guest => guest.guestName)
@@ -23,10 +25,11 @@ const Contact = () => {
         isPresent: JSON.parse(isPresent),
         isChild,
         isVegetarian,
+      }).then(() => {
+        setRerender(!rerender)
+        localStorage.setItem('form_submitted', JSON.stringify(true))
       })
     })
-
-    localStorage.setItem('form_submitted', JSON.stringify(true))
   }
 
   const formIsSubmitted = JSON.parse(localStorage.getItem('form_submitted')) ?? null
@@ -36,14 +39,11 @@ const Contact = () => {
       <Banner />
       <Wrapper>
         {!formIsSubmitted ? (
-          <Formik
-            initialValues={formInitValues}
-            onSubmit={addGuests}
-            render={({ values, _, __, handleReset }) => (
+          <Formik initialValues={formInitValues} onSubmit={addGuests}>
+            {({ values, _, __, handleReset }) => (
               <Form>
-                <FieldArray
-                  name='guests'
-                  render={({ _, remove, push }) => (
+                <FieldArray name='guests'>
+                  {({ _, remove, push }) => (
                     <>
                       {values.guests.map((_, index) => (
                         <div key={index}>
@@ -59,12 +59,12 @@ const Contact = () => {
                           </Button>
                         </div>
                       ))}
-                      <Button type='button' onClick={() => values.guests.length < 5 && push({ ...formInitGuesObj })}>
+                      <Button type='button' onClick={() => values.guests.length < 5 && push({ ...formInitGuestObj })}>
                         Add guest
                       </Button>
                     </>
                   )}
-                />
+                </FieldArray>
                 <Button
                   onClick={evt => {
                     evt.preventDefault()
@@ -75,9 +75,9 @@ const Contact = () => {
                 <Button type='submit'>ADD DATA</Button>
               </Form>
             )}
-          />
+          </Formik>
         ) : (
-          <H2>Form is already submitted, contact us for more info</H2>
+          <H2>Form is submitted, contact us for more info</H2>
         )}
       </Wrapper>
     </>
