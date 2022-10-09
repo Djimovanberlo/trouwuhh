@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { doc, setDoc } from 'firebase/firestore'
 import { FieldArray, Form, Formik } from 'formik'
 
+import { useThemeContext } from '../../layout/theme'
 import { Button } from '../../components/buttons'
 import { FormCheckBoxField, FormRadioField, FormTextField } from '../../components/form'
 import { H2, P } from '../../components/typography'
@@ -10,6 +11,7 @@ import Banner from '../../layout/banner'
 import Wrapper from '../../layout/wrapper'
 
 const Contact = () => {
+  const { theme } = useThemeContext(0)
   const [rerender, setRerender] = useState(false)
   const formInitGuestObj = { guestName: '', isPresent: false, isChild: false, isVegetarian: false }
   const formInitValues = { guests: [{ ...formInitGuestObj }] }
@@ -36,7 +38,7 @@ const Contact = () => {
 
   return (
     <>
-      <Banner />
+      <Banner src={`/${theme}/banner_contact.jpg`} />
       <Wrapper>
         {!formIsSubmitted ? (
           <Formik initialValues={formInitValues} onSubmit={addGuests}>

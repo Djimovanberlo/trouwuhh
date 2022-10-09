@@ -1,11 +1,5 @@
 .banner {
   width: 100%;
-  height: 200px;
-  border: 2px solid red;
-
-  &--belgium {
-  }
-
-  &--cheesy {
-  }
+  object-fit: cover;
+  height: 25rem;
 }

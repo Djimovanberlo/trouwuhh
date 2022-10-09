@@ -3,12 +3,12 @@ import Banner from '../../layout/banner'
 import { useThemeContext } from '../../layout/theme'
 import Wrapper from '../../layout/wrapper'
 
-// Datum + tijd
-
 const HomePage = () => {
+  const { theme } = useThemeContext(0)
+
   return (
     <>
-      <Banner />
+      <Banner src={`/${theme}/banner_home.jpg`} />
       <Wrapper>
         <FlexSection />
         <FlexSection isReverse belgiumColor='yellow' />

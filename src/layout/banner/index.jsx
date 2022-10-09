@@ -1,9 +1,3 @@
-import { useThemeContext } from '../theme'
-
-const Banner = () => {
-  const { theme } = useThemeContext()
-
-  return <div className={`banner banner--${theme}`}></div>
-}
+const Banner = ({ src }) => <img className='banner' alt='' src={src} />
 
 export default Banner
