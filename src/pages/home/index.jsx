@@ -1,5 +1,6 @@
 import FlexSection from '../../components/flex-section'
 import Banner from '../../layout/banner'
+import { useThemeContext } from '../../layout/theme'
 import Wrapper from '../../layout/wrapper'
 
 // Datum + tijd

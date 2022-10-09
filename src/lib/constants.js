@@ -3,6 +3,11 @@ export const THEMES = {
   belgium: 'belgium',
 }
 
+export const LANGUAGES = {
+  en: 'en',
+  nl: 'nl',
+}
+
 export const NAV_ITEMS = [
   {
     text: 'Home',

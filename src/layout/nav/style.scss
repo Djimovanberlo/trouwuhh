@@ -43,6 +43,11 @@ $border-size: 4px;
     display: flex;
     gap: $space-xs;
   }
+
+  &__themeToggles {
+    display: flex;
+    gap: 0.5rem;
+  }
 }
 
 .hamburger {

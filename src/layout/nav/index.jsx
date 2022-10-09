@@ -3,6 +3,7 @@ import Toggle from '../../components/toggle'
 import NavigationLarge from './nav-large'
 import NavigationSmall from './nav-small'
 import { useThemeContext } from '../theme'
+import Flags from '../../components/flags'
 
 const Navigation = () => {
   const isMediumScreen = useIsMediumScreen()
@@ -11,7 +12,10 @@ const Navigation = () => {
   return (
     <div className={`wrapper nav nav--${isMediumScreen ? 'small' : 'large'} nav--${theme}`}>
       {isMediumScreen ? <NavigationSmall /> : <NavigationLarge />}
-      <Toggle />
+      <div className='nav__themeToggles'>
+        <Flags />
+        <Toggle />
+      </div>
     </div>
   )
 }

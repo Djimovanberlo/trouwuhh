@@ -23,14 +23,11 @@ export const ButtonBelgium = ({ type = null, className = '', onClick = null, chi
   </button>
 )
 
-export const ButtonLinkCheesy = ({ className = '', to = null, children }) => {
-  console.log('TO', to)
-  return (
-    <Link className={`button button--cheesy ${className}`} to={to}>
-      {children}
-    </Link>
-  )
-}
+export const ButtonLinkCheesy = ({ className = '', to = null, children }) => (
+  <Link className={`button button--cheesy ${className}`} to={to}>
+    {children}
+  </Link>
+)
 
 export const ButtonLinkBelgium = ({ className = '', to = null, children }) => (
   <Link className={`button button--belgium ${className}`} to={to}>
