@@ -3,6 +3,7 @@ $border-size: 8px;
 .flex-section {
   display: flex;
   flex-direction: column;
+  align-items: stretch;
   margin: $space-md 0;
   @include transition--fast;
 
@@ -21,10 +22,7 @@ $border-size: 8px;
   }
 
   &__block {
-    height: 50%;
-
     @include screen-md {
-      height: 100%;
       width: 50%;
     }
 
@@ -60,6 +58,11 @@ $border-size: 8px;
       background-color: $cheesy-color-white-transparent;
       @include border($border-size, $cheesy-color-white-transparent);
       padding: $space-xs;
+    }
+
+    &--img {
+      display: grid;
+      place-items: center;
     }
   }
 }

@@ -3,6 +3,7 @@
   margin-left: auto;
   margin-right: auto;
   padding-top: $small-header-height;
+  padding-bottom: $space-md;
 
   @include screen-md {
     padding-top: 0;

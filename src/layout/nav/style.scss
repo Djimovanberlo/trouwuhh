@@ -47,10 +47,16 @@ $border-size: 4px;
   &__themeToggles {
     display: flex;
     gap: 0.5rem;
+    flex-direction: row-reverse;
+
+    @include screen-md {
+      flex-direction: row;
+    }
   }
 }
 
 .hamburger {
+  cursor: pointer;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -115,6 +121,10 @@ $border-size: 4px;
   flex-direction: column;
   gap: $space-sm;
   padding: $space-sm;
+
+  > div {
+    cursor: pointer;
+  }
 
   &--belgium {
     background-color: $belgium-color-black;

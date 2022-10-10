@@ -9,7 +9,7 @@ const Flags = () => {
 
   return (
     <div className='flags' onClick={toggleLanguage}>
-      {language == 'en' ? <FlagNL /> : <FlagUK />}
+      {language === 'en' ? <FlagNL /> : <FlagUK />}
     </div>
   )
 }
