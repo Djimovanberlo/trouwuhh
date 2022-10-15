@@ -2,7 +2,7 @@ export const blockGeneral = {
   en: {
     names: 'Djimo en Jolien',
     text: 'Are throwing a party',
-    dateTime: '27 mei 2023 | 17:00 | Belgium',
+    dateTime: '27 mei 2023 | 17:00',
     location: 'Belgium',
   },
   nl: {
