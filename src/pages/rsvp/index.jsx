@@ -95,7 +95,7 @@ const Rsvp = () => {
               )}
             </Formik>
           ) : (
-            <H2>Form is submitted, contact us for more info</H2>
+            <H2>{formCopy[language].submitted}</H2>
           )}
         </FlexSection>
       </Wrapper>

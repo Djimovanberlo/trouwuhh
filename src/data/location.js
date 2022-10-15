@@ -23,7 +23,7 @@ export const blockArea = {
     text: 'Some incredible tourist attractions in the area (apart from this party):',
     domToren: 'De prachtige domtoren van Utrecht - slechts 200km naar het noorden.',
   },
-  en: {
+  nl: {
     text: 'Een aantal ongelofelijke attracties in de omgeving (naast dit feestje):',
     domToren: "Utrecht's gorgeous church tower - only 200km northwards.",
   },

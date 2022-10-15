@@ -3,7 +3,7 @@ import Banner from '../../layout/banner'
 import Wrapper from '../../layout/wrapper'
 import FlexSection from '../../components/flex-section'
 import { faqBlock, questionsBlock } from '../../data/contact'
-import { H1, H2 } from '../../components/typography'
+import { A, H1, H2 } from '../../components/typography'
 
 const Contact = () => {
   const { theme, language } = useThemeContext()
@@ -15,13 +15,13 @@ const Contact = () => {
         <FlexSection image={`/${theme}/icons/contact_1.svg`}>
           <H1>{questionsBlock[language].text}</H1>
           <br />
-          <a className='contact__listItem' href='mailto:djimovanberlo@gmail.com' target='_blank'>
+          <A className='contact__listItem' href='mailto:djimovanberlo@gmail.com'>
             <H2>djimovanberlo@gmail.com</H2>
-          </a>
-          <br />
-          <a className='contact__listItem' href='mailto:jolienschuurmans@gmail.com' target='_blank'>
+          </A>
+          <A className='contact__listItem' href='mailto:jolienschuurmans@gmail.com'>
             <H2>jolienschuurmans@gmail.com</H2>
-          </a>
+          </A>
+          <br />
         </FlexSection>
         <FlexSection image={`/${theme}/icons/contact_2.svg`} isReverse>
           <H2>{faqBlock[language].questionOne}</H2>

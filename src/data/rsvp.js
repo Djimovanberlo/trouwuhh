@@ -10,6 +10,7 @@ export const formCopy = {
     addGuest: 'Add guest',
     submitBtn: 'Submit',
     resetBtn: 'Reset data',
+    submitted: 'Thanks! Contact us for more info.',
   },
   nl: {
     placeHolder: 'naam',
@@ -22,5 +23,6 @@ export const formCopy = {
     addGuest: 'Nieuwe gast',
     submitBtn: 'Meld aan',
     resetBtn: 'Begin opnieuw',
+    submitted: 'Bedankt! Neem contact met ons op voor meer info.',
   },
 }

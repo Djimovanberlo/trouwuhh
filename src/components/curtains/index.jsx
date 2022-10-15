@@ -3,7 +3,7 @@ import { useState } from 'react'
 
 import { ButtonNeutral } from '../buttons'
 import { FormTextField } from '../form'
-import { H2, H2Neutral, PNeutral } from '../typography'
+import { PNeutral } from '../typography'
 
 const Curtains = () => {
   const [isPwCorrect, setIsPwCorrect] = useState(false)
