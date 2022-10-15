@@ -7,13 +7,13 @@ import { useThemeContext } from '../theme'
 
 const NavigationLarge = () => {
   const id = useId()
-  const { theme } = useThemeContext()
+  const { theme, language } = useThemeContext()
 
   return (
     <div className={`nav__wrapper-large nav__wrapper-large--${theme}`}>
       {NAV_ITEMS.map(({ text, href }, index) => (
         <ButtonLink key={`${id}--${index}`} to={href}>
-          <P>{text}</P>
+          <P>{text[language]}</P>
         </ButtonLink>
       ))}
     </div>

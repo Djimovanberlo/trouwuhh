@@ -9,7 +9,7 @@ import Hamburger from './hamburger'
 const NavList = ({ isNavOpen, toggleNavOpen }) => {
   const id = useId()
   const navigate = useNavigate()
-  const { theme } = useThemeContext()
+  const { theme, language } = useThemeContext()
 
   const handleClick = href => evt => {
     evt.preventDefault()
@@ -21,7 +21,7 @@ const NavList = ({ isNavOpen, toggleNavOpen }) => {
     <div className={`nav-list nav-list--${theme} ${isNavOpen ? 'nav-list--open' : 'nav-list--closed'}`}>
       {NAV_ITEMS.map(({ text, href }, index) => (
         <div key={`${id}--${index}`} onClick={handleClick(href)}>
-          <P>{text}</P>
+          <P>{text[language]}</P>
         </div>
       ))}
     </div>

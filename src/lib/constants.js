@@ -10,19 +10,19 @@ export const LANGUAGES = {
 
 export const NAV_ITEMS = [
   {
-    text: 'Home',
+    text: { en: 'Home', nl: 'Home' },
     href: '/',
   },
   {
-    text: 'Location',
+    text: { en: 'Location', nl: 'Locatie' },
     href: '/location',
   },
   {
-    text: 'RSVP',
+    text: { en: 'RSVP', nl: 'RSVP' },
     href: '/rsvp',
   },
   {
-    text: 'Contact / FAQ',
+    text: { en: 'Contact / FAQ', nl: 'Contact / FAQ' },
     href: '/contact',
   },
 ]
