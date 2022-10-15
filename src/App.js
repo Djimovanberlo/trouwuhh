@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 
 import Navigation from './layout/nav'
 import Container from './layout/container'
@@ -25,7 +25,7 @@ const App = () => {
     <>
       {displayCurtains && <Curtains />}
       <ThemeProvider>
-        <BrowserRouter>
+        <HashRouter>
           <Container>
             <Navigation />
             <Routes>
@@ -35,7 +35,7 @@ const App = () => {
               <Route path='/contact' element={<Contact />} />
             </Routes>
           </Container>
-        </BrowserRouter>
+        </HashRouter>
       </ThemeProvider>
     </>
   )
