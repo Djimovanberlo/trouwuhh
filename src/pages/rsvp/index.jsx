@@ -52,35 +52,42 @@ const Rsvp = () => {
                       <>
                         {values.guests.map((_, index) => (
                           <div key={index}>
-                            <FormTextField name={`guests.${index}.guestName`} placeholder={formCopy[language].placeHolder} />
-                            <P>{formCopy[language].attendance}</P>
-                            <FormRadioField name={`guests.${index}.isPresent`} value='true' labelText={formCopy[language].yes} />
-                            <FormRadioField name={`guests.${index}.isPresent`} value='false' labelText={formCopy[language].no} />
+                            <div>
+                              <FormTextField name={`guests.${index}.guestName`} placeholder={formCopy[language].placeHolder} />
+                              <br />
+                              <br />
+                              <P>{formCopy[language].attendance}</P>
+                              <FormRadioField name={`guests.${index}.isPresent`} value='true' labelText={formCopy[language].yes} />
+                              <FormRadioField name={`guests.${index}.isPresent`} value='false' labelText={formCopy[language].no} />
+                            </div>
                             <br />
                             <FormCheckBoxField name={`guests.${index}.isChild`} labelText={formCopy[language].kidsPortion} /> <br />
                             <FormCheckBoxField name={`guests.${index}.isVegetarian`} labelText={formCopy[language].veggieOption} /> <br />
-                            {values.guests.length > 1 && (
-                              <Button type='button' onClick={() => remove(index)}>
-                                <P>{formCopy[language].removeGuest}</P>
-                              </Button>
-                            )}
+                            <br />
+                            <div className='rsvp__btns'>
+                              {values.guests.length > 1 && (
+                                <Button type='button' onClick={() => remove(index)}>
+                                  <P>{formCopy[language].removeGuest}</P>
+                                </Button>
+                              )}
+                              {values.guests.length === index + 1 && (
+                                <Button type='button' onClick={() => push({ ...formInitGuestObj })}>
+                                  <P>{formCopy[language].addGuest}</P>
+                                </Button>
+                              )}
+                            </div>
                           </div>
                         ))}
-                        {values.guests.length < 5 && (
-                          <Button type='button' onClick={() => push({ ...formInitGuestObj })}>
-                            <P>{formCopy[language].addGuest}</P>
-                          </Button>
-                        )}
                       </>
                     )}
                   </FieldArray>
-                  <Button
+                  {/* <Button
                     onClick={evt => {
                       evt.preventDefault()
                       handleReset()
                     }}>
                     <P>{formCopy[language].resetBtn}</P>
-                  </Button>
+                  </Button> */}
                   <Button type='submit'>
                     <P>{formCopy[language].submitBtn}</P>
                   </Button>

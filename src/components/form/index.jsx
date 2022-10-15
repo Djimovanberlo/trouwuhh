@@ -1,7 +1,7 @@
 import { Field } from 'formik'
 import { Label } from '../typography'
 
-const FormTextField = ({ name, placeholder }) => <Field name={name} placeholder={placeholder} />
+const FormTextField = ({ name, placeholder }) => <Field className='formTextField' name={name} placeholder={placeholder} />
 
 const FormCheckBoxField = ({ name, labelText }) => (
   <Label>
