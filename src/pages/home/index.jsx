@@ -11,7 +11,7 @@ const HomePage = () => {
 
   return (
     <>
-      <Banner src={`${process.env.PUBLIC_URL}/${theme}/banners/home.jpg`} />
+      <Banner src={`/${theme}/banners/home.jpg`} />
       <Wrapper>
         <FlexSection image={`/${theme}/icons/home_1.svg`}>
           <H1>{blockGeneral[language].names}</H1>

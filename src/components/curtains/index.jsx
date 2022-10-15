@@ -3,6 +3,7 @@ import { useState } from 'react'
 
 import { ButtonNeutral } from '../buttons'
 import { FormTextField } from '../form'
+import Image from '../image'
 import { PNeutral } from '../typography'
 
 const Curtains = () => {
@@ -21,8 +22,8 @@ const Curtains = () => {
   return (
     <div className={`curtains ${isPwCorrect ? 'curtains--open' : ''}`}>
       <div className='curtains__container'>
-        <img alt='' className={`curtains__left ${isPwCorrect ? 'curtains__left--open' : ''}`} src='/curtain-left.png' />
-        <img alt='' className={`curtains__right ${isPwCorrect ? 'curtains__right--open' : ''}`} src='/curtain-right.png' />
+        <Image className={`curtains__left ${isPwCorrect ? 'curtains__left--open' : ''}`} src='/curtain-left.png' />
+        <Image alt='' className={`curtains__right ${isPwCorrect ? 'curtains__right--open' : ''}`} src='/curtain-right.png' />
         <Formik initialValues={formInitValues} onSubmit={handleClick}>
           <Form className={`curtains__form ${isPwCorrect ? 'curtains__form--open' : ''}`}>
             <FormTextField name='password' placeholder='Enter password' />
