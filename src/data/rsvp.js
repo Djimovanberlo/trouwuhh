@@ -1,1 +1,26 @@
-export {}
+export const formCopy = {
+  en: {
+    placeHolder: 'name',
+    attendance: 'Attending',
+    yes: 'Yes',
+    no: 'No',
+    kidsPortion: "Children's portion",
+    veggieOption: 'Vegetarian',
+    removeGuest: 'Remove guest',
+    addGuest: 'Add guest',
+    submitBtn: 'Submit',
+    resetBtn: 'Reset data',
+  },
+  nl: {
+    placeHolder: 'naam',
+    attendance: 'Aanwezig',
+    yes: 'Ja',
+    no: 'Nee',
+    kidsPortion: 'Kinderportie',
+    veggieOption: 'Vegetarisch',
+    removeGuest: 'Verwijder gast',
+    addGuest: 'Nieuwe gast',
+    submitBtn: 'Meld aan',
+    resetBtn: 'Begin opnieuw',
+  },
+}

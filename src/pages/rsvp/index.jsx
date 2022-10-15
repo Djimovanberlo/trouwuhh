@@ -10,9 +10,10 @@ import { FormCheckBoxField, FormRadioField, FormTextField } from '../../componen
 import { Button } from '../../components/buttons'
 import { H2, P } from '../../components/typography'
 import FlexSection from '../../components/flex-section'
+import { formCopy } from '../../data/rsvp'
 
 const Rsvp = () => {
-  const { theme } = useThemeContext()
+  const { theme, language } = useThemeContext()
   const [rerender, setRerender] = useState(false)
   const formInitGuestObj = { guestName: '', isPresent: false, isChild: false, isVegetarian: false }
   const formInitValues = { guests: [{ ...formInitGuestObj }] }
@@ -51,23 +52,23 @@ const Rsvp = () => {
                       <>
                         {values.guests.map((_, index) => (
                           <div key={index}>
-                            <FormTextField name={`guests.${index}.guestName`} placeholder='name' />
-                            <P>Aanwezig</P>
-                            <FormRadioField name={`guests.${index}.isPresent`} value='true' labelText='Ja' />
-                            <FormRadioField name={`guests.${index}.isPresent`} value='false' labelText='Nee' />
+                            <FormTextField name={`guests.${index}.guestName`} placeholder={formCopy[language].placeHolder} />
+                            <P>{formCopy[language].attendance}</P>
+                            <FormRadioField name={`guests.${index}.isPresent`} value='true' labelText={formCopy[language].yes} />
+                            <FormRadioField name={`guests.${index}.isPresent`} value='false' labelText={formCopy[language].no} />
                             <br />
-                            <FormCheckBoxField name={`guests.${index}.isChild`} labelText='kinderportie' /> <br />
-                            <FormCheckBoxField name={`guests.${index}.isVegetarian`} labelText='vega aub' /> <br />
+                            <FormCheckBoxField name={`guests.${index}.isChild`} labelText={formCopy[language].kidsPortion} /> <br />
+                            <FormCheckBoxField name={`guests.${index}.isVegetarian`} labelText={formCopy[language].veggieOption} /> <br />
                             {values.guests.length > 1 && (
                               <Button type='button' onClick={() => remove(index)}>
-                                <P>Remove guest</P>
+                                <P>{formCopy[language].removeGuest}</P>
                               </Button>
                             )}
                           </div>
                         ))}
                         {values.guests.length < 5 && (
                           <Button type='button' onClick={() => push({ ...formInitGuestObj })}>
-                            <P>Add guest</P>
+                            <P>{formCopy[language].addGuest}</P>
                           </Button>
                         )}
                       </>
@@ -78,10 +79,10 @@ const Rsvp = () => {
                       evt.preventDefault()
                       handleReset()
                     }}>
-                    <P>RESET</P>
+                    <P>{formCopy[language].resetBtn}</P>
                   </Button>
                   <Button type='submit'>
-                    <P>ADD DATA</P>
+                    <P>{formCopy[language].submitBtn}</P>
                   </Button>
                 </Form>
               )}

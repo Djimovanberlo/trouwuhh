@@ -34,3 +34,9 @@ export const ButtonLinkBelgium = ({ className = '', to = null, children }) => (
     {children}
   </Link>
 )
+
+export const ButtonNeutral = ({ type = null, onClick = null, children }) => (
+  <button type={type} className='button button--neutral' onClick={onClick}>
+    {children}
+  </button>
+)

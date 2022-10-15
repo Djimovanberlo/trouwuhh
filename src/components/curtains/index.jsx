@@ -1,8 +1,9 @@
 import { Form, Formik } from 'formik'
 import { useState } from 'react'
 
-import { ButtonBelgium } from '../buttons'
+import { ButtonNeutral } from '../buttons'
 import { FormTextField } from '../form'
+import { H2, H2Neutral, PNeutral } from '../typography'
 
 const Curtains = () => {
   const [isPwCorrect, setIsPwCorrect] = useState(false)
@@ -25,7 +26,9 @@ const Curtains = () => {
         <Formik initialValues={formInitValues} onSubmit={handleClick}>
           <Form className={`curtains__form ${isPwCorrect ? 'curtains__form--open' : ''}`}>
             <FormTextField name='password' placeholder='Enter password' />
-            <ButtonBelgium type='submit'>Submit</ButtonBelgium>
+            <ButtonNeutral type='submit'>
+              <PNeutral>Submit</PNeutral>
+            </ButtonNeutral>
           </Form>
         </Formik>
       </div>

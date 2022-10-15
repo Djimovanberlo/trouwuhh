@@ -15,6 +15,10 @@ export const P = ({ className = '', children }) => {
   return <p className={`p p--${theme} ${className}`}>{children}</p>
 }
 
+export const PNeutral = ({ children }) => {
+  return <p className={`p p--neutral`}>{children}</p>
+}
+
 export const Label = ({ className = '', children }) => {
   const { theme } = useThemeContext()
   return <label className={`label label--${theme} ${className}`}>{children}</label>
