@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/trouwuhh/static/css/main.1f4a1c9e.css",
-    "main.js": "/trouwuhh/static/js/main.5d5b45cf.js",
+    "main.js": "/trouwuhh/static/js/main.5f7dac3d.js",
     "static/js/787.438c3617.chunk.js": "/trouwuhh/static/js/787.438c3617.chunk.js",
     "static/media/background.jpg": "/trouwuhh/static/media/background.878ad9d26aa8c5cf5d9d.jpg",
     "static/media/Roboto-Regular.woff": "/trouwuhh/static/media/Roboto-Regular.4a463af37c9eaeca8205.woff",
@@ -9,11 +9,11 @@
     "static/media/Vivaldii.woff": "/trouwuhh/static/media/Vivaldii.911798d4e749f4963ea0.woff",
     "index.html": "/trouwuhh/index.html",
     "main.1f4a1c9e.css.map": "/trouwuhh/static/css/main.1f4a1c9e.css.map",
-    "main.5d5b45cf.js.map": "/trouwuhh/static/js/main.5d5b45cf.js.map",
+    "main.5f7dac3d.js.map": "/trouwuhh/static/js/main.5f7dac3d.js.map",
     "787.438c3617.chunk.js.map": "/trouwuhh/static/js/787.438c3617.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1f4a1c9e.css",
-    "static/js/main.5d5b45cf.js"
+    "static/js/main.5f7dac3d.js"
   ]
 }
