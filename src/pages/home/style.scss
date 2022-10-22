@@ -1,0 +1,24 @@
+.home {
+  &__mb {
+    margin-bottom: $space-sm;
+  }
+
+  &__link {
+    display: flex;
+
+    &::before {
+      content: '>';
+      width: $space-sm;
+      text-align: center;
+    }
+
+    &--cheesy::before {
+      font-family: 'DancingScript-Regular';
+      color: $cheesy-color-pink;
+    }
+
+    &--belgium::before {
+      font-family: 'Roboto-Regular';
+    }
+  }
+}

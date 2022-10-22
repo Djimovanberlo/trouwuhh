@@ -20,9 +20,11 @@ const HomePage = () => {
           <H2>{blockGeneral[language].location}</H2>
         </FlexSection>
         <FlexSection image={`/${theme}/icons/home_2.svg`} isReverse belgiumColor='yellow'>
-          <H1>{blockRSVP[language].text}</H1>
+          <H1 className='home__mb'>{blockRSVP[language].text}</H1>
           <H2>
-            <Link to='/rsvp'>{blockRSVP[language].linkText}</Link>
+            <Link className='home__link' to='/rsvp'>
+              {blockRSVP[language].linkText}
+            </Link>
           </H2>
         </FlexSection>
       </Wrapper>

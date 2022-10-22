@@ -24,8 +24,11 @@ export const Label = ({ className = '', children }) => {
   return <label className={`label label--${theme} ${className}`}>{children}</label>
 }
 
-export const A = ({ className = '', href = '', children }) => (
-  <a className={className} href={href} target='_blank' rel='noreferrer'>
-    {children}
-  </a>
-)
+export const A = ({ className = '', href = '', children }) => {
+  const { theme } = useThemeContext()
+  return (
+    <a className={`a a--${theme} ${className}`} href={href} target='_blank' rel='noreferrer'>
+      {children}
+    </a>
+  )
+}

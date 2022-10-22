@@ -1,10 +1,12 @@
 export const blockTransport = {
   en: {
-    parking: 'There are many parking spots along the Rte du Renipont. Click here for more info.',
+    parking: 'There are many parking spots along the Rte du Renipont.',
+    clickInfo: 'Click here for more info',
     transport: 'Please take care of transport yourselves. Make arrangements with a taxi service (perhaps in advance) or a designated driver. Public transport options are limited.',
   },
   nl: {
-    parking: 'Parkeerplaatsen zijn te vinden langs de Rte du Renipont. Klik hier voor meer info.',
+    parking: 'Parkeerplaatsen zijn te vinden langs de Rte du Renipont.',
+    clickInfo: 'Klik hier voor meer info',
     transport: 'Gasten zijn verantwoordelijk voor hun eigen transport. Verzorg zelf een taxi (evt vooraf) of een Bob! Mogelijkheden voor openbaar vervoer zijn beperkt.',
   },
 }

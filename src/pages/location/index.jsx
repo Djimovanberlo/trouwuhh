@@ -13,16 +13,20 @@ const Location = () => {
       <Banner src={`/${theme}/banners/location.jpg`} />
       <Wrapper>
         <FlexSection>
+          <H1>Le Rideau Rouge</H1>
           <A href='https://goo.gl/maps/bgfUDzJJTDaNyDn47'>
-            <H1 className='location__title'>Le Rideau Rouge</H1>
-            <H2>Rte de Renipont 70</H2>
-            <H2>1380 Lasne</H2>
-            <H2>Belgique</H2>
+            <H2>
+              Rte de Renipont 70 <br />
+              1380 Lasne
+              <br />
+              Belgique
+            </H2>
           </A>
         </FlexSection>
         <FlexSection image={`/${theme}/icons/location_1.svg`} belgiumColor='yellow' isReverse>
+          <H2 className='location__mb'>{blockTransport[language].parking}</H2>
           <A href='https://goo.gl/maps/z4e9XKg8wi2TTY186'>
-            <H2 className='location__mb'>{blockTransport[language].parking}</H2>
+            <H2 className='location__mb'>{blockTransport[language].clickInfo}</H2>
           </A>
           <H2>{blockTransport[language].transport}</H2>
         </FlexSection>
@@ -44,16 +48,14 @@ const Location = () => {
         </FlexSection>
         <FlexSection image={`/${theme}/icons/location_3.svg`} isReverse>
           <H2 className='location__mb'>{blockArea[language].text}</H2>
-          <a className='location__listItem' href='https://www.museeherge.com/en' target='_blank' rel='noreferrer'>
-            <H2>Muséé Hergé</H2>
-          </a>
-          <br />
-          <A className='location__listItem' href='https://villers.be/en'>
-            <H2>Abbaye de Villers-La-Ville</H2>
+          <A className='location__listItem' href='https://www.museeherge.com/en' target='_blank' rel='noreferrer'>
+            <H2 className='location__mb'>Muséé Hergé</H2>
           </A>
-          <br />
+          <A className='location__listItem' href='https://villers.be/en'>
+            <H2 className='location__mb'>Abbaye de Villers-La-Ville</H2>
+          </A>
           <A className='location__listItem' href='https://www.waterloo1815.be/en/'>
-            <H2>Waterloo 1815 Memorial</H2>
+            <H2 className='location__mb'>Waterloo 1815 Memorial</H2>
           </A>
           <A className='location__listItem' href='https://www.walibi.be/en'>
             <H2>Walibi & Aqualibi Belgium</H2>

@@ -1,17 +1,9 @@
 .location {
-  &__title {
-    text-decoration: underline;
-  }
-
   &__mb {
     margin-bottom: $space-sm;
   }
 
   &__listItem {
     display: inline-block;
-
-    > .h2 {
-      margin-left: $space-sm;
-    }
   }
 }

@@ -51,4 +51,22 @@
   }
 }
 
-// font-family: 'Roboto', sans-serif;
+.a {
+  display: flex;
+
+  &::before {
+    content: '>';
+    width: $space-sm;
+    text-align: center;
+    padding-top: 3px;
+  }
+
+  &--cheesy::before {
+    font-family: 'DancingScript-Regular';
+    color: $cheesy-color-pink;
+  }
+
+  &--belgium::before {
+    font-family: 'Roboto-Regular';
+  }
+}
