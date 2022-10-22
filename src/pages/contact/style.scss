@@ -1,13 +1,21 @@
 .contact {
+  &__listTitle {
+    margin-bottom: $space-sm;
+  }
+  
   &__listItem {
     display: inline-block;
-
+    
     > .h2 {
       margin-left: $space-sm;
     }
   }
-
+  
   &__answer {
     margin-left: $space-sm;
+
+    &:not(:last-child) {
+      margin-bottom: $space-sm;
+    }
   }
 }

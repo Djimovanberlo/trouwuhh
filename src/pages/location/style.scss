@@ -3,6 +3,10 @@
     text-decoration: underline;
   }
 
+  &__mb {
+    margin-bottom: $space-sm;
+  }
+
   &__listItem {
     display: inline-block;
 

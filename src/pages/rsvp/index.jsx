@@ -19,7 +19,7 @@ const Rsvp = () => {
   const formInitValues = { guests: [{ ...formInitGuestObj }] }
 
   const addGuests = values => {
-    console.log("VALUES", values)
+    console.log('VALUES', values)
     const nameArr = values.guests.map(guest => guest.guestName)
     const attendanceArr = values.guests.map(guest => guest.isPresent)
     if (nameArr.some(guestName => !guestName)) return
@@ -55,18 +55,13 @@ const Rsvp = () => {
                       <>
                         {values.guests.map((_, index) => (
                           <div key={index}>
-                            <div>
-                              <FormTextField name={`guests.${index}.guestName`} placeholder={formCopy[language].placeHolder} />
-                              <br />
-                              <br />
-                              <P>{formCopy[language].attendance}</P>
-                              <FormRadioField name={`guests.${index}.isPresent`} value='true' labelText={formCopy[language].yes} />
-                              <FormRadioField name={`guests.${index}.isPresent`} value='false' labelText={formCopy[language].no} />
-                            </div>
+                            <FormTextField className='rsvp__textField' name={`guests.${index}.guestName`} placeholder={formCopy[language].placeHolder} />
+                            <P>{formCopy[language].attendance}</P>
+                            <FormRadioField name={`guests.${index}.isPresent`} value='true' labelText={formCopy[language].yes} />
+                            <FormRadioField className='rsvp__attendance' name={`guests.${index}.isPresent`} value='false' labelText={formCopy[language].no} />
                             <br />
                             <FormCheckBoxField name={`guests.${index}.isChild`} labelText={formCopy[language].kidsPortion} /> <br />
-                            <FormCheckBoxField name={`guests.${index}.isVegetarian`} labelText={formCopy[language].veggieOption} /> <br />
-                            <br />
+                            <FormCheckBoxField className='rsvp__checkboxes' name={`guests.${index}.isVegetarian`} labelText={formCopy[language].veggieOption} /> <br />
                             <div className='rsvp__btns'>
                               {values.guests.length > 1 && (
                                 <Button type='button' onClick={() => remove(index)}>

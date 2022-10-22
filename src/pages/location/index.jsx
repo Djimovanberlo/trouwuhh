@@ -22,14 +22,12 @@ const Location = () => {
         </FlexSection>
         <FlexSection image={`/${theme}/icons/location_1.svg`} belgiumColor='yellow' isReverse>
           <A href='https://goo.gl/maps/z4e9XKg8wi2TTY186'>
-            <H2>{blockTransport[language].parking}</H2>
+            <H2 className='location__mb'>{blockTransport[language].parking}</H2>
           </A>
-          <br />
           <H2>{blockTransport[language].transport}</H2>
         </FlexSection>
         <FlexSection image={`/${theme}/icons/location_2.svg`} belgiumColor='red'>
-          <H2>{blockAccommodation[language].text}</H2>
-          <br />
+          <H2 className='location__mb'>{blockAccommodation[language].text}</H2>
           <A className='location__listItem' href='https://www.martinshotels.com/en/page/martins-louvain-la-neuve/martins-louvain-la-neuve-innovation-lifestyle-hotel.11057.html'>
             <H2>Martin's Louvain-La-Neuve</H2>
           </A>
@@ -45,8 +43,7 @@ const Location = () => {
           </A>
         </FlexSection>
         <FlexSection image={`/${theme}/icons/location_3.svg`} isReverse>
-          <H2>{blockArea[language].text}</H2>
-          <br />
+          <H2 className='location__mb'>{blockArea[language].text}</H2>
           <a className='location__listItem' href='https://www.museeherge.com/en' target='_blank' rel='noreferrer'>
             <H2>Muséé Hergé</H2>
           </a>

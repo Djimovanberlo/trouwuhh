@@ -1,18 +1,18 @@
 import { Field } from 'formik'
 import { Label } from '../typography'
 
-const FormTextField = ({ name, placeholder }) => <Field className='formTextField' name={name} placeholder={placeholder} />
+const FormTextField = ({ className = '', name, placeholder }) => <Field className={`${className} formTextField`} name={name} placeholder={placeholder} />
 
-const FormCheckBoxField = ({ name, labelText }) => (
+const FormCheckBoxField = ({ className = '', name, labelText }) => (
   <Label>
-    <Field type='checkbox' name={name} />
+    <Field className={className} type='checkbox' name={name} />
     {labelText}
   </Label>
 )
 
-const FormRadioField = ({ name, value, labelText }) => (
+const FormRadioField = ({ className = '', name, value, labelText }) => (
   <Label>
-    <Field type='radio' name={name} value={value} />
+    <Field className={className} type='radio' name={name} value={value} />
     {labelText}
   </Label>
 )
