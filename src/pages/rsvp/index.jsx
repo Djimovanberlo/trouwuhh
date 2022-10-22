@@ -15,12 +15,15 @@ import { formCopy } from '../../data/rsvp'
 const Rsvp = () => {
   const { theme, language } = useThemeContext()
   const [rerender, setRerender] = useState(false)
-  const formInitGuestObj = { guestName: '', isPresent: false, isChild: false, isVegetarian: false }
+  const formInitGuestObj = { guestName: '', isPresent: null, isChild: false, isVegetarian: false }
   const formInitValues = { guests: [{ ...formInitGuestObj }] }
 
   const addGuests = values => {
+    console.log("VALUES", values)
     const nameArr = values.guests.map(guest => guest.guestName)
+    const attendanceArr = values.guests.map(guest => guest.isPresent)
     if (nameArr.some(guestName => !guestName)) return
+    if (attendanceArr.some(attendance => attendance === null)) return
 
     values.guests.forEach(guest => {
       const { guestName, isPresent, isChild, isVegetarian } = guest
@@ -70,7 +73,7 @@ const Rsvp = () => {
                                   <P>{formCopy[language].removeGuest}</P>
                                 </Button>
                               )}
-                              {values.guests.length === index + 1 && (
+                              {values.guests.length === index + 1 && values.guests.length < 5 && (
                                 <Button type='button' onClick={() => push({ ...formInitGuestObj })}>
                                   <P>{formCopy[language].addGuest}</P>
                                 </Button>

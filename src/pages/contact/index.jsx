@@ -23,7 +23,7 @@ const Contact = () => {
           </A>
           <br />
         </FlexSection>
-        <FlexSection image={`/${theme}/icons/contact_2.svg`} isReverse>
+        <FlexSection image={`/${theme}/icons/contact_2.svg`} isReverse belgiumColor='yellow'>
           <H2>{faqBlock[language].questionOne}</H2>
           <H2 className='contact__answer'>{faqBlock[language].answerOne}</H2>
           <br />
