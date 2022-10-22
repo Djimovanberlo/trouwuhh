@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/trouwuhh/static/css/main.37d364dc.css",
-    "main.js": "/trouwuhh/static/js/main.8b042368.js",
+    "main.css": "/trouwuhh/static/css/main.b4468dd2.css",
+    "main.js": "/trouwuhh/static/js/main.aa4ed996.js",
     "static/js/787.438c3617.chunk.js": "/trouwuhh/static/js/787.438c3617.chunk.js",
     "static/media/background.jpg": "/trouwuhh/static/media/background.878ad9d26aa8c5cf5d9d.jpg",
     "static/media/Roboto-Regular.woff": "/trouwuhh/static/media/Roboto-Regular.4a463af37c9eaeca8205.woff",
     "static/media/DancingScript-Regular.woff": "/trouwuhh/static/media/DancingScript-Regular.84459f45a7addfbe46cc.woff",
     "static/media/Vivaldii.woff": "/trouwuhh/static/media/Vivaldii.911798d4e749f4963ea0.woff",
     "index.html": "/trouwuhh/index.html",
-    "main.37d364dc.css.map": "/trouwuhh/static/css/main.37d364dc.css.map",
-    "main.8b042368.js.map": "/trouwuhh/static/js/main.8b042368.js.map",
+    "main.b4468dd2.css.map": "/trouwuhh/static/css/main.b4468dd2.css.map",
+    "main.aa4ed996.js.map": "/trouwuhh/static/js/main.aa4ed996.js.map",
     "787.438c3617.chunk.js.map": "/trouwuhh/static/js/787.438c3617.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.37d364dc.css",
-    "static/js/main.8b042368.js"
+    "static/css/main.b4468dd2.css",
+    "static/js/main.aa4ed996.js"
   ]
 }
