@@ -33,10 +33,12 @@ const NavigationSmall = () => {
   const toggleNavOpen = () => setNavIsOpen(!isNavOpen)
 
   return (
-    <div className='nav--small__wrapper'>
-      <Hamburger isNavOpen={isNavOpen} toggleNavOpen={toggleNavOpen} />
+    <>
+      <div className='nav--small__wrapper'>
+        <Hamburger isNavOpen={isNavOpen} toggleNavOpen={toggleNavOpen} />
+      </div>
       <NavList isNavOpen={isNavOpen} toggleNavOpen={toggleNavOpen} />
-    </div>
+    </>
   )
 }
 

@@ -20,10 +20,8 @@ const Rsvp = () => {
   const formInitValues = { guests: [{ ...formInitGuestObj }] }
 
   const addGuests = values => {
-    const nameArr = values.guests.map(guest => guest.guestName)
-    const attendanceArr = values.guests.map(guest => guest.isPresent)
-    const isMissingNames = nameArr.some(guestName => !guestName)
-    const isMissingAttendance = attendanceArr.some(attendance => attendance === null)
+    const isMissingNames = values.guests.map(guest => guest.guestName).some(guestName => !guestName)
+    const isMissingAttendance = values.guests.map(guest => guest.isPresent).some(attendance => attendance === null)
 
     if (isMissingNames || isMissingAttendance) {
       setIsError(true)

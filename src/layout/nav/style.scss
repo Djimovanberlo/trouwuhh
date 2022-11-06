@@ -26,12 +26,15 @@ $border-size: 4px;
 
   &--small {
     position: fixed;
+    height: $space-lg;
     top: 0;
     flex-direction: row-reverse;
     width: 100%;
 
     &__wrapper {
-      position: relative;
+      height: 100%;
+      display: grid;
+      place-items: center;
     }
   }
 
@@ -51,6 +54,7 @@ $border-size: 4px;
 
     @include screen-md {
       flex-direction: row;
+      justify-content: space-between;
     }
   }
 }
@@ -114,9 +118,9 @@ $border-size: 4px;
 .nav-list {
   @include transition--fast;
   position: absolute;
-  top: calc(100% + $space-xs);
+  top: $space-lg;
   width: 50vw;
-  height: calc(100vh - $small-header-height);
+  height: calc(100vh - $space-lg);
   display: flex;
   flex-direction: column;
   gap: $space-sm;
