@@ -1,7 +1,7 @@
 export const formCopy = {
   en: {
-    placeHolder: 'name',
-    attendance: 'Attending',
+    placeHolder: 'name*',
+    attendance: 'Attending*',
     yes: 'Yes',
     no: 'No',
     kidsPortion: "Children's portion",
@@ -10,11 +10,12 @@ export const formCopy = {
     addGuest: 'Add guest',
     submitBtn: 'Submit',
     resetBtn: 'Reset data',
+    errorMsg: 'Please fill in all required fields*.',
     submitted: 'Thanks! Contact us for more info.',
   },
   nl: {
-    placeHolder: 'naam',
-    attendance: 'Aanwezig',
+    placeHolder: 'naam*',
+    attendance: 'Aanwezig*',
     yes: 'Ja',
     no: 'Nee',
     kidsPortion: 'Kinderportie',
@@ -23,6 +24,7 @@ export const formCopy = {
     addGuest: 'Nieuwe gast',
     submitBtn: 'Meld aan',
     resetBtn: 'Begin opnieuw',
+    errorMsg: 'Vul de vereiste velden* in.',
     submitted: 'Bedankt! Neem contact met ons op voor meer info.',
   },
 }

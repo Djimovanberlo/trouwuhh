@@ -14,16 +14,21 @@ import { formCopy } from '../../data/rsvp'
 
 const Rsvp = () => {
   const { theme, language } = useThemeContext()
+  const [isError, setIsError] = useState(false)
   const [rerender, setRerender] = useState(false)
   const formInitGuestObj = { guestName: '', isPresent: null, isChild: false, isVegetarian: false }
   const formInitValues = { guests: [{ ...formInitGuestObj }] }
 
   const addGuests = values => {
-    console.log('VALUES', values)
     const nameArr = values.guests.map(guest => guest.guestName)
     const attendanceArr = values.guests.map(guest => guest.isPresent)
-    if (nameArr.some(guestName => !guestName)) return
-    if (attendanceArr.some(attendance => attendance === null)) return
+    const isMissingNames = nameArr.some(guestName => !guestName)
+    const isMissingAttendance = attendanceArr.some(attendance => attendance === null)
+
+    if (isMissingNames || isMissingAttendance) {
+      setIsError(true)
+      return
+    }
 
     values.guests.forEach(guest => {
       const { guestName, isPresent, isChild, isVegetarian } = guest
@@ -62,7 +67,7 @@ const Rsvp = () => {
                             <br />
                             <FormCheckBoxField name={`guests.${index}.isChild`} labelText={formCopy[language].kidsPortion} /> <br />
                             <FormCheckBoxField className='rsvp__checkboxes' name={`guests.${index}.isVegetarian`} labelText={formCopy[language].veggieOption} /> <br />
-                            <div className='rsvp__btns'>
+                            <div className='rsvp__btns rsvp__btns--withSpaceBot'>
                               {values.guests.length > 1 && (
                                 <Button type='button' onClick={() => remove(index)}>
                                   <P>{formCopy[language].removeGuest}</P>
@@ -86,9 +91,12 @@ const Rsvp = () => {
                     }}>
                     <P>{formCopy[language].resetBtn}</P>
                   </Button> */}
-                  <Button type='submit'>
-                    <P>{formCopy[language].submitBtn}</P>
-                  </Button>
+                  <div className='rsvp__btns'>
+                    <Button type='submit'>
+                      <P>{formCopy[language].submitBtn}</P>
+                    </Button>
+                    {isError && <H2>{formCopy[language].errorMsg}</H2>}
+                  </div>
                 </Form>
               )}
             </Formik>

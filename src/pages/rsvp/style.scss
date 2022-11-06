@@ -1,13 +1,16 @@
 .rsvp {
   &__textField,
   &__attendance,
-  &__checkboxes,
-  &__btns {
+  &__checkboxes {
     margin-bottom: $space-sm;
   }
 
   &__btns {
     display: flex;
     gap: $space-xs;
+
+    &--withSpaceBot {
+      margin-bottom: $space-sm;
+    }
   }
 }

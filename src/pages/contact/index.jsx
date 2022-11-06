@@ -30,8 +30,8 @@ const Contact = () => {
           <H2 className='contact__answer'>{faqBlock[language].answerThree}</H2>
           <H2>{faqBlock[language].questionFour}</H2>
           <H2 className='contact__answer'>{faqBlock[language].answerFour}</H2>
-          <A className='contact__listItem--space' href='mailto:jolienschuurmans@gmail.com'>
-            <H2>JULIA EMAIL</H2>
+          <A className='contact__listItem--space' href='mailto:jvossen97@gmail.com'>
+            <H2>jvossen97@gmail.com</H2>
           </A>
           <H2>{faqBlock[language].questionFive}</H2>
           <H2 className='contact__answer'>{faqBlock[language].answerFive}</H2>
