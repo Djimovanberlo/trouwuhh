@@ -5,6 +5,10 @@
 
   &__listItem {
     display: inline-block;
+
+    &--space {
+      margin-bottom: $space-sm;
+    }
   }
 
   &__answer {
