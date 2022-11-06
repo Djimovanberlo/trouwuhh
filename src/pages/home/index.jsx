@@ -1,10 +1,11 @@
+import { Link } from 'react-router-dom'
+
 import Banner from '../../layout/banner'
 import { useThemeContext } from '../../layout/theme'
 import Wrapper from '../../layout/wrapper'
 import FlexSection from '../../components/flex-section'
 import { H1, H2 } from '../../components/typography'
 import { blockGeneral, blockRSVP } from '../../data/home'
-import { Link } from 'react-router-dom'
 
 const HomePage = () => {
   const { theme, language } = useThemeContext()

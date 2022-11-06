@@ -1,9 +1,10 @@
 import { Form, Formik } from 'formik'
 import { useState } from 'react'
 
+import bangs from '../../bangs.mp3'
+import Image from '../image'
 import { ButtonNeutral } from '../buttons'
 import { FormTextField } from '../form'
-import Image from '../image'
 import { PNeutral } from '../typography'
 
 const Curtains = () => {
@@ -14,6 +15,8 @@ const Curtains = () => {
   const handleClick = ({ password }) => {
     const lowerCasePw = password.toLowerCase()
     if (lowerCasePw === process.env.REACT_APP_WEBSITE_PASSWORD) {
+      const bangs8 = new Audio(bangs)
+      bangs8.play()
       localStorage.setItem('password_correct', JSON.stringify(true))
       setIsPwCorrect(true)
     }
