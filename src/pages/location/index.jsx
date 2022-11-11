@@ -8,6 +8,8 @@ import { blockAccommodation, blockArea, blockTransport } from '../../data/locati
 const Location = () => {
   const { theme, language } = useThemeContext()
 
+  const domTorenText = language === 'nl' ? 'De domtoren van Utrecht is slechts 200km ten noorden van de locatie!' : "Utrecht's Dom Tower is only just 200km to the north!"
+
   return (
     <>
       <Banner src={`/${theme}/banners/location.jpg`} />
@@ -58,7 +60,10 @@ const Location = () => {
             <H2 className='location__mb'>Waterloo 1815 Memorial</H2>
           </A>
           <A className='location__listItem' href='https://www.walibi.be/en'>
-            <H2>Walibi & Aqualibi Belgium</H2>
+            <H2 className='location__mb'>Walibi & Aqualibi Belgium</H2>
+          </A>
+          <A className='location__listItem' href='https://www.walibi.be/en'>
+            <H2>{domTorenText}</H2>
           </A>
         </FlexSection>
       </Wrapper>

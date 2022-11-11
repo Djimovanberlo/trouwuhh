@@ -22,22 +22,20 @@ const App = () => {
   }, [])
 
   return (
-    <>
+    <ThemeProvider>
       {displayCurtains && <Curtains />}
-      <ThemeProvider>
-        <HashRouter>
-          <Container>
-            <Navigation />
-            <Routes>
-              <Route path='/' element={<HomePage />} />
-              <Route path='/location' element={<Location />} />
-              <Route path='/rsvp' element={<Rsvp />} />
-              <Route path='/contact' element={<Contact />} />
-            </Routes>
-          </Container>
-        </HashRouter>
-      </ThemeProvider>
-    </>
+      <HashRouter>
+        <Container>
+          <Navigation />
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/location' element={<Location />} />
+            <Route path='/rsvp' element={<Rsvp />} />
+            <Route path='/contact' element={<Contact />} />
+          </Routes>
+        </Container>
+      </HashRouter>
+    </ThemeProvider>
   )
 }
 

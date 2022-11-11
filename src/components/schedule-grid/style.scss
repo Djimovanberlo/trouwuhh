@@ -1,0 +1,6 @@
+.scheduleGrid {
+  margin-left: $space-sm;
+  margin-bottom: $space-sm;
+  display: grid;
+  grid-template-columns: 5rem 1fr;
+}

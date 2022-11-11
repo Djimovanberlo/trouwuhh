@@ -11,8 +11,8 @@ const Flags = () => {
 
   return (
     <div className='flags' onClick={toggleLanguage}>
-      {language === LANGUAGES.nl ? <FlagNL /> : <FlagUK />}
-      <P className={`flags--${theme}--text`}>{language === LANGUAGES.nl ? 'NL' : 'EN'}</P>
+      {language === LANGUAGES.nl ? <FlagUK /> : <FlagNL />}
+      <P className={`flags--${theme}--text`}>{language === LANGUAGES.nl ? 'EN' : 'NL'}</P>
     </div>
   )
 }

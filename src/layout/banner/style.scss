@@ -2,4 +2,8 @@
   width: 100%;
   object-fit: cover;
   height: 25rem;
+
+  &--cheesy {
+    @include border($border-size, $cheesy-color-pink-transparent);
+  }
 }
