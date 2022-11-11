@@ -27,7 +27,7 @@ const Location = () => {
         </FlexSection>
         <FlexSection image={`/${theme}/icons/location_1.svg`} belgiumColor='yellow' isReverse>
           <H2 className='location__mb'>{blockTransport[language].parking}</H2>
-          <A href='https://goo.gl/maps/z4e9XKg8wi2TTY186'>
+          <A href='https://www.lerideaurouge.be/parking'>
             <H2 className='location__mb'>{blockTransport[language].clickInfo}</H2>
           </A>
           <H2>{blockTransport[language].transport}</H2>
@@ -62,7 +62,7 @@ const Location = () => {
           <A className='location__listItem' href='https://www.walibi.be/en'>
             <H2 className='location__mb'>Walibi & Aqualibi Belgium</H2>
           </A>
-          <A className='location__listItem' href='https://www.walibi.be/en'>
+          <A className='location__listItem' href='https://www.domtoren.nl/'>
             <H2>{domTorenText}</H2>
           </A>
         </FlexSection>

@@ -1,4 +1,5 @@
-import { useId, useState } from 'react'
+import { useRef } from 'react'
+import { useEffect, useId, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { P } from '../../components/typography'
 
@@ -29,12 +30,32 @@ const NavList = ({ isNavOpen, toggleNavOpen }) => {
 }
 
 const NavigationSmall = () => {
+  const ref = useRef(null)
   const [isNavOpen, setNavIsOpen] = useState(false)
   const toggleNavOpen = () => setNavIsOpen(!isNavOpen)
 
+  const useOnClickOutside = (ref, handler) => {
+    useEffect(() => {
+      const listener = event => {
+        if (!ref.current || ref.current.contains(event.target)) {
+          return
+        }
+        handler(event)
+      }
+      document.addEventListener('mousedown', listener)
+      document.addEventListener('touchstart', listener)
+      return () => {
+        document.removeEventListener('mousedown', listener)
+        document.removeEventListener('touchstart', listener)
+      }
+    }, [ref, handler])
+  }
+
+  useOnClickOutside(ref, () => setNavIsOpen(false))
+
   return (
     <>
-      <div className='nav--small__wrapper'>
+      <div ref={ref} className='nav--small__wrapper'>
         <Hamburger isNavOpen={isNavOpen} toggleNavOpen={toggleNavOpen} />
       </div>
       <NavList isNavOpen={isNavOpen} toggleNavOpen={toggleNavOpen} />

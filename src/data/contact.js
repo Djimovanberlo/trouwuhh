@@ -33,13 +33,13 @@ export const schedule = {
   nl: [
     { time: '17:00', activity: 'receptie' },
     { time: '18:00', activity: 'diner' },
-    { time: '20:00', activity: 'feest met open bar tot 01:00' },
+    { time: '20:00', activity: 'feest' },
     { time: '02:00', activity: 'eind' },
   ],
   en: [
     { time: '17:00', activity: 'reception' },
     { time: '18:00', activity: 'dinner' },
-    { time: '20:00', activity: 'party with open bar until 01:00' },
+    { time: '20:00', activity: 'party' },
     { time: '02:00', activity: 'end' },
   ],
 }
