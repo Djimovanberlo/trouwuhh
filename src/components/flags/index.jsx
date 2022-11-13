@@ -2,9 +2,9 @@ import { useThemeContext } from '../../layout/theme'
 import { LANGUAGES } from '../../lib/constants'
 import { P } from '../typography'
 
-const FlagUK = () => <img alt='' src='http://purecatamphetamine.github.io/country-flag-icons/3x2/GB.svg' />
+const FlagUK = () => <img alt='' src='https://purecatamphetamine.github.io/country-flag-icons/3x2/GB.svg' />
 
-const FlagNL = () => <img alt='' src='http://purecatamphetamine.github.io/country-flag-icons/3x2/NL.svg' />
+const FlagNL = () => <img alt='' src='https://purecatamphetamine.github.io/country-flag-icons/3x2/NL.svg' />
 
 const Flags = () => {
   const { language, toggleLanguage, theme } = useThemeContext()
