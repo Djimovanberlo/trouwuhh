@@ -5,48 +5,62 @@ $border-size: 4px;
   justify-content: space-between;
   align-items: center;
   padding: $space-xs 0;
-
+  
   &--belgium {
     background-color: $color-white;
     border-bottom: 2px solid $belgium-color-black;
-
+    
     @include screen-md {
       background-color: transparent;
       border: none;
     }
   }
-
+  
   &--cheesy {
     background-color: $cheesy-color-pink-transparent;
-
+    
     @include screen-md {
       background-color: transparent;
     }
   }
-
+  
   &--small {
+    padding-left: $space-sm;
+    padding-right: $space-sm;
     position: fixed;
     height: $space-lg;
     top: 0;
     flex-direction: row-reverse;
     width: 100%;
-
+    
     &__wrapper {
       height: 100%;
       display: grid;
       place-items: center;
     }
   }
-
+  
   &--large {
     flex-direction: row;
-  }
+    padding-left: $space-sm;
+    padding-right: $space-sm;
 
+    @include screen-md {
+      padding-left: $space-sm;
+      padding-right: $space-sm;
+    }
+  
+    @include screen-lg {
+      padding-left: $space-lg;
+      padding-right: $space-lg;
+    }
+  }
+  
   &__wrapper-large {
     display: flex;
     gap: $space-xs;
   }
-
+  
   &__themeToggles {
     display: flex;
     gap: 0.5rem;

@@ -1,9 +1,9 @@
 .flags {
-  display: flex;
+  display: flex;     
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  min-height: 100%;
+  max-height: 100%;
   width: 2rem;
 
   &:hover {
@@ -16,5 +16,9 @@
     @include screen-md {
       color: $cheesy-color-pink !important;
     }
+  }
+
+  & > img {
+    width: 2rem;
   }
 }

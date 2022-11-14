@@ -10,7 +10,7 @@ const Navigation = () => {
   const { theme } = useThemeContext()
 
   return (
-    <div className={`wrapper nav nav--${isMediumScreen ? 'small' : 'large'} nav--${theme}`}>
+    <div className={`nav nav--${isMediumScreen ? 'small' : 'large'} nav--${theme}`}>
       {isMediumScreen ? <NavigationSmall /> : <NavigationLarge />}
       <div className='nav__themeToggles'>
         <Flags />
