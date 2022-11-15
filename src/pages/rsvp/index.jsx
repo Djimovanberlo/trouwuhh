@@ -29,6 +29,7 @@ const Rsvp = () => {
       setErrorText(formCopy[language].errorMsgFe)
       return
     }
+
     try {
       values.guests.forEach(guest => {
         const { guestName, isPresent, isChild, isVegetarian } = guest
