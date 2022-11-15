@@ -1,6 +1,6 @@
 export const formCopy = {
   en: {
-    placeHolder: 'name*',
+    placeHolder: 'Full name*',
     attendance: 'Attending*',
     yes: 'Yes',
     no: 'No',
@@ -10,11 +10,12 @@ export const formCopy = {
     addGuest: 'Add guest',
     submitBtn: 'Submit',
     resetBtn: 'Reset data',
-    errorMsg: 'Please fill in all required fields*.',
+    errorMsgFe: 'Please fill in all required fields*.',
+    errorMsgBe: 'Something went wrong. Please contact Djimo.',
     submitted: 'Thanks! Contact us for more info.',
   },
   nl: {
-    placeHolder: 'naam*',
+    placeHolder: 'Voor- en achternaam*',
     attendance: 'Aanwezig*',
     yes: 'Ja',
     no: 'Nee',
@@ -24,7 +25,8 @@ export const formCopy = {
     addGuest: 'Nieuwe gast',
     submitBtn: 'Meld aan',
     resetBtn: 'Begin opnieuw',
-    errorMsg: 'Vul de vereiste velden* in.',
+    errorMsgFe: 'Vul de vereiste velden* in.',
+    errorMsgBe: 'Er is iets misgegaan. Neem contact op met Djimo.',
     submitted: 'Bedankt! Neem contact met ons op voor meer info.',
   },
 }

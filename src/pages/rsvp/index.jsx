@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { doc, setDoc } from 'firebase/firestore'
+import { addDoc, collection } from 'firebase/firestore'
 
 import { db, GUEST_COLLECTION } from '../../firebase/config'
 import Banner from '../../layout/banner'
@@ -14,8 +14,9 @@ import { formCopy } from '../../data/rsvp'
 
 const Rsvp = () => {
   const { theme, language } = useThemeContext()
-  const [isError, setIsError] = useState(false)
   const [rerender, setRerender] = useState(false)
+  const [isError, setIsError] = useState(false)
+  const [errorText, setErrorText] = useState('')
   const formInitGuestObj = { guestName: '', isPresent: null, isChild: false, isVegetarian: false }
   const formInitValues = { guests: [{ ...formInitGuestObj }] }
 
@@ -25,21 +26,26 @@ const Rsvp = () => {
 
     if (isMissingNames || isMissingAttendance) {
       setIsError(true)
+      setErrorText(formCopy[language].errorMsgFe)
       return
     }
-
-    values.guests.forEach(guest => {
-      const { guestName, isPresent, isChild, isVegetarian } = guest
-      setDoc(doc(db, GUEST_COLLECTION, guestName), {
-        guestName,
-        isPresent: JSON.parse(isPresent),
-        isChild,
-        isVegetarian,
-      }).then(() => {
-        setRerender(!rerender)
-        localStorage.setItem('form_submitted', JSON.stringify(true))
+    try {
+      values.guests.forEach(guest => {
+        const { guestName, isPresent, isChild, isVegetarian } = guest
+        addDoc(collection(db, GUEST_COLLECTION), {
+          guestName,
+          isPresent: JSON.parse(isPresent),
+          isChild,
+          isVegetarian,
+        }).then(() => {
+          setRerender(!rerender)
+          localStorage.setItem('form_submitted', JSON.stringify(true))
+        })
       })
-    })
+    } catch (err) {
+      console.error(err)
+      setErrorText(formCopy[language].errorMsgBe)
+    }
   }
 
   const formIsSubmitted = JSON.parse(localStorage.getItem('form_submitted')) ?? null
@@ -93,7 +99,7 @@ const Rsvp = () => {
                     <Button type='submit'>
                       <P>{formCopy[language].submitBtn}</P>
                     </Button>
-                    {isError && <H2>{formCopy[language].errorMsg}</H2>}
+                    {isError && <H2>{errorText}</H2>}
                   </div>
                 </Form>
               )}
