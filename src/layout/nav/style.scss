@@ -5,25 +5,25 @@ $border-size: 4px;
   justify-content: space-between;
   align-items: center;
   padding: $space-xs 0;
-  
+
   &--belgium {
     background-color: $color-white;
     border-bottom: 2px solid $belgium-color-black;
-    
+
     @include screen-md {
       background-color: transparent;
       border: none;
     }
   }
-  
+
   &--cheesy {
     background-color: $cheesy-color-pink-transparent;
-    
+
     @include screen-md {
       background-color: transparent;
     }
   }
-  
+
   &--small {
     padding-left: $space-sm;
     padding-right: $space-sm;
@@ -32,14 +32,14 @@ $border-size: 4px;
     top: 0;
     flex-direction: row-reverse;
     width: 100%;
-    
+
     &__wrapper {
       height: 100%;
       display: grid;
       place-items: center;
     }
   }
-  
+
   &--large {
     flex-direction: row;
     padding-left: $space-sm;
@@ -49,18 +49,18 @@ $border-size: 4px;
       padding-left: $space-sm;
       padding-right: $space-sm;
     }
-  
+
     @include screen-lg {
       padding-left: $space-lg;
       padding-right: $space-lg;
     }
   }
-  
+
   &__wrapper-large {
     display: flex;
     gap: $space-xs;
   }
-  
+
   &__themeToggles {
     display: flex;
     gap: 0.5rem;
@@ -130,13 +130,14 @@ $border-size: 4px;
 }
 
 .nav-list {
-  @include transition--fast;
+  @include transition--medium;
   position: absolute;
   top: $space-lg;
-  width: 50vw;
+  width: 100vw;
   height: calc(100vh - $space-lg);
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: $space-sm;
   padding: $space-sm;
 
@@ -159,12 +160,12 @@ $border-size: 4px;
   }
 
   &--open {
-    right: -$space-sm;
+    right: 0;
     visibility: visible;
   }
 
   &--closed {
     visibility: hidden;
-    right: calc(-50vw - $space-sm);
+    right: -100vw;
   }
 }

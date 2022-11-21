@@ -23,6 +23,10 @@
   @include transition(0.3s);
 }
 
+@mixin transition--medium {
+  @include transition(0.75s);
+}
+
 @mixin transition--slow {
   @include transition(2s);
 }
