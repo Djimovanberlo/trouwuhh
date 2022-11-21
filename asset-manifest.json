@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/trouwuhh/static/css/main.fdcce29f.css",
-    "main.js": "/trouwuhh/static/js/main.3da0ea63.js",
+    "main.css": "/trouwuhh/static/css/main.865d7b63.css",
+    "main.js": "/trouwuhh/static/js/main.2c0476a3.js",
     "static/js/787.438c3617.chunk.js": "/trouwuhh/static/js/787.438c3617.chunk.js",
     "static/media/bangs.mp3": "/trouwuhh/static/media/bangs.15bb546d748c948aeca0.mp3",
     "static/media/background.jpg": "/trouwuhh/static/media/background.878ad9d26aa8c5cf5d9d.jpg",
@@ -9,12 +9,12 @@
     "static/media/DancingScript-Regular.woff": "/trouwuhh/static/media/DancingScript-Regular.84459f45a7addfbe46cc.woff",
     "static/media/Vivaldii.woff": "/trouwuhh/static/media/Vivaldii.911798d4e749f4963ea0.woff",
     "index.html": "/trouwuhh/index.html",
-    "main.fdcce29f.css.map": "/trouwuhh/static/css/main.fdcce29f.css.map",
-    "main.3da0ea63.js.map": "/trouwuhh/static/js/main.3da0ea63.js.map",
+    "main.865d7b63.css.map": "/trouwuhh/static/css/main.865d7b63.css.map",
+    "main.2c0476a3.js.map": "/trouwuhh/static/js/main.2c0476a3.js.map",
     "787.438c3617.chunk.js.map": "/trouwuhh/static/js/787.438c3617.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fdcce29f.css",
-    "static/js/main.3da0ea63.js"
+    "static/css/main.865d7b63.css",
+    "static/js/main.2c0476a3.js"
   ]
 }
