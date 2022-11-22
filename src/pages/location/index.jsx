@@ -51,7 +51,7 @@ const Location = () => {
         <FlexSection image={`/${theme}/icons/location_3.svg`} isReverse>
           <H2 className='location__mb'>{blockArea[language].text}</H2>
           <A className='location__listItem' href='https://www.museeherge.com/en' target='_blank' rel='noreferrer'>
-            <H2 className='location__mb'>Muséé Hergé</H2>
+            <H2 className='location__mb'>Musée Hergé</H2>
           </A>
           <A className='location__listItem' href='https://villers.be/en'>
             <H2 className='location__mb'>Abbaye de Villers-La-Ville</H2>
