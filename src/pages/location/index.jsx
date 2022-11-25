@@ -7,7 +7,7 @@ import { blockAccommodation, blockArea, blockTransport } from '../../data/locati
 
 const Location = () => {
   const { theme, language } = useThemeContext()
-
+  // this is a test
   const domTorenText = language === 'nl' ? 'De domtoren van Utrecht is slechts 200km ten noorden van de locatie!' : "Utrecht's Dom Tower is only just 200km to the north!"
 
   return (
