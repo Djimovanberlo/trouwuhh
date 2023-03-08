@@ -30,8 +30,8 @@ const Contact = () => {
           <H2>{faqBlock[language].questionFive}</H2>
           <H2 className='contact__answer'>{faqBlock[language].answerFive}</H2>
           <H2 className='contact__answer'>
-            JPRA Schuurmans
-            <br /> NL66 INGB 0008 7236 91
+            Mw JPRA Schuurmans, Hr DC van Berlo
+            <br /> NL58 INGB 0100 0206 23
           </H2>
           <H2>{faqBlock[language].questionSix}</H2>
           <H2 className='contact__answer'>
