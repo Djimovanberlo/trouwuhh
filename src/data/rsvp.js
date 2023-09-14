@@ -13,6 +13,7 @@ export const formCopy = {
     errorMsgFe: 'Please fill in all required fields*.',
     errorMsgBe: 'Something went wrong. Please contact Djimo.',
     submitted: 'Thanks! Contact us for more info.',
+    disabled: 'This form has been disabled. Thanks for your RSVP!',
   },
   nl: {
     placeHolder: 'Voor- en achternaam*',
@@ -28,5 +29,6 @@ export const formCopy = {
     errorMsgFe: 'Vul de vereiste velden* in.',
     errorMsgBe: 'Er is iets misgegaan. Neem contact op met Djimo.',
     submitted: 'Bedankt! Neem contact met ons op voor meer info.',
+    disabled: 'Dit formulier is uitgeschakeld. Bedankt voor je RSVP!',
   },
 }

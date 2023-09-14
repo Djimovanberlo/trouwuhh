@@ -97,10 +97,10 @@ const Rsvp = () => {
                     <P>{formCopy[language].resetBtn}</P>
                   </Button> */}
                   <div className='rsvp__btns'>
-                    <Button type='submit'>
+                    <Button>
                       <P>{formCopy[language].submitBtn}</P>
                     </Button>
-                    {isError && <H2>{errorText}</H2>}
+                    <H2>{formCopy[language].disabled}</H2>
                   </div>
                 </Form>
               )}
